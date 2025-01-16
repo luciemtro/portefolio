@@ -1,7 +1,7 @@
 export default function Navigation() {
   return (
     <nav
-      className="navigation fixed bottom-0 w-full"
+      className="navigation fixed bottom-0 w-full z-20"
       aria-label="Menu de navigation principal"
     >
       <ul className="navigation-list flex justify-center gap-4 w-full">

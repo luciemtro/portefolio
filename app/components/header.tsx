@@ -2,20 +2,16 @@ export default function Header() {
   return (
     <section
       id="header"
-      className="header h-screen"
+      className="header h-screen w-screen"
       aria-label="Section d'accueil"
     >
-      <article>
-        <header>
-          <h1 className="header-title">Lucie Monteiro</h1>
-          <h2 className="header-subtitle">
-            Développeuse Web Junior & Créatrice d`expériences numériques
-          </h2>
+      <div className="linear-gradient"></div>
+      <article className="cards h-screen w-screen">
+        <header className="card animated eeve h-screen w-screen">
+          <h1 className="header-title">Bienvenue, je suis Lucie</h1>
+          <h2 className="header-subtitle">Développeuse Web</h2>
+          <p>Découvrez mon univers à travers mes projets !</p>
         </header>
-        <p className="header-description">
-          Codeuse, créative et toujours curieuse. Découvrez mon univers et mes
-          projets uniques !
-        </p>
       </article>
     </section>
   );
