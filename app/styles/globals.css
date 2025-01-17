@@ -4,6 +4,9 @@
 @import "about.css";
 @import "competences.css";
 @import "experiences.css";
+@import "contact.css";
+@import "projects.css";
+@import "cv.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -33,7 +33,7 @@
   height: 101%;
 }
 :root {
-  --color1: rgb(0, 231, 255);
+  --color1: rgb(136, 215, 255);
   --color2: rgb(255, 0, 231);
   --back: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
   --eevee1: #efb2fb;
@@ -45,7 +45,7 @@
   touch-action: none;
   will-change: transform, filter;
   background-image: url("./header-portefolio.webp");
-  filter: hue-rotate(-10deg);
+  filter: hue-rotate(-10deg) saturate(0.8);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
