@@ -1,10 +1,10 @@
 export default function Navigation() {
   return (
     <nav
-      className="navigation fixed bottom-0 w-full z-20"
+      className="navigation z-20 fixed"
       aria-label="Menu de navigation principal"
     >
-      <ul className="navigation-list flex justify-center gap-4 w-full">
+      <ul className="navigation-list px-4 py-2 flex gap-5 box font-basic ">
         <li>
           <a href="#header" className="navigation-link">
             Accueil

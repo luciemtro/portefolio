@@ -1,6 +1,31 @@
+.header-title {
+  animation: translateX 1.5s 0.5s forwards;
+}
+.header-subtitle {
+  animation: translateX 1.8s 0.5s forwards;
+}
+.header-p {
+  animation: translateX 2s 0.5s forwards;
+}
+.container-text-header {
+  right: 6%;
+  top: 10%;
+  transform: translateX(200%);
+  animation: translateX 1s 0.5s forwards;
+}
+
+@keyframes translateX {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .linear-gradient {
   background: linear-gradient(45deg, transparent 50%, rgba(0, 0, 0, 0.579));
-  z-index: 21;
+  z-index: 15;
   position: absolute;
   top: 0;
   left: 0;
@@ -16,11 +41,10 @@
 }
 .card {
   position: relative;
-
   z-index: 10;
   touch-action: none;
   will-change: transform, filter;
-  background-image: url("https://i.ibb.co/r00wdnM/header-portefolio.jpg");
+  background-image: url("./header-portefolio.webp");
   filter: hue-rotate(-10deg);
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,0 +1,8 @@
+.navigation-list {
+  width: fit-content;
+}
+.navigation {
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}

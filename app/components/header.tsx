@@ -8,9 +8,17 @@ export default function Header() {
       <div className="linear-gradient"></div>
       <article className="cards h-screen w-screen">
         <header className="card animated eeve h-screen w-screen">
-          <h1 className="header-title">Bienvenue, je suis Lucie</h1>
-          <h2 className="header-subtitle">Développeuse Web</h2>
-          <p>Découvrez mon univers à travers mes projets !</p>
+          <div className="container-text-header absolute p-5 box">
+            <h1 className="header-title font-title">
+              Bienvenue, je suis Lucie
+            </h1>
+            <h2 className="header-subtitle font-basic text-2xl uppercase">
+              Développeuse Web
+            </h2>
+            <p className="font-basic text-lg pt-2 pb-4 header-p">
+              Découvrez mon univers à travers mes projets !
+            </p>
+          </div>
         </header>
       </article>
     </section>
