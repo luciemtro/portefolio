@@ -9,7 +9,7 @@ export default function Cv() {
         download="cvluciemonteiro.pdf"
         className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
       >
-        Télécharger en PDF
+        Télécharger mon cv en PDF
       </a>
     </section>
   );

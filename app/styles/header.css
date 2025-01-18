@@ -8,7 +8,7 @@
   animation: translateX 2s 0.5s forwards;
 }
 .container-text-header {
-  right: 6%;
+  left: 6%;
   top: 10%;
   transform: translateX(200%);
   animation: translateX 1s 0.5s forwards;
@@ -24,7 +24,12 @@
 }
 
 .linear-gradient {
-  background: linear-gradient(45deg, transparent 50%, rgba(0, 0, 0, 0.579));
+  background: linear-gradient(
+    95deg,
+    rgba(0, 0, 0, 0.784),
+    transparent 50%,
+    rgba(0, 0, 0, 0.579)
+  );
   z-index: 15;
   position: absolute;
   top: 0;
@@ -33,19 +38,15 @@
   height: 101%;
 }
 :root {
-  --color1: rgb(136, 215, 255);
-  --color2: rgb(255, 0, 231);
-  --back: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
-  --eevee1: #efb2fb;
-  --eevee2: #acc6f8;
+  --color1: rgba(255, 238, 250, 0.808);
+  --color2: rgba(134, 83, 83, 0.421);
 }
 .card {
   position: relative;
   z-index: 10;
   touch-action: none;
   will-change: transform, filter;
-  background-image: url("./header-portefolio.webp");
-  filter: hue-rotate(-10deg) saturate(0.8);
+  background-image: url("./images/header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -72,8 +73,8 @@
     transparent 0%,
     var(--color1) 25%,
     transparent 47%,
-    transparent 53%,
-    var(--color2) 75%,
+    var(--color2) 53%,
+
     transparent 100%
   );
   opacity: 0.5;
@@ -83,19 +84,10 @@
 
 .card:after {
   opacity: 1;
-  background-image: url("https://assets.codepen.io/13471/sparkles.gif"),
-    url(https://assets.codepen.io/13471/holo.png),
-    linear-gradient(
-      125deg,
-      #ff008450 15%,
-      #fca40040 30%,
-      #ffff0030 40%,
-      #00ff8a20 60%,
-      #00cfff40 70%,
-      #cc4cfa50 85%
-    );
-  background-position: 50% 50%;
-  background-size: 45%;
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif");
+  background-position: 20% 100%;
+  background-size: 15%;
+  border-radius: 50%;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
   z-index: 2;
@@ -115,7 +107,7 @@
   background-image: linear-gradient(
     110deg,
     transparent 25%,
-    var(--color1) 48%,
+    var(--color1) 40%,
     var(--color2) 52%,
     transparent 75%
   );
@@ -125,7 +117,7 @@
 
 .card.animated {
   &:before {
-    animation: holoGradient 7s ease 0s infinite alternate-reverse;
+    animation: holoGradient 6.5s ease 0s infinite alternate-reverse;
   }
 }
 

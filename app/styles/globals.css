@@ -32,6 +32,8 @@ body {
 }
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html {
   scroll-behavior: smooth;
@@ -47,10 +49,4 @@ html {
   font-family: "Rubik", serif;
   font-optical-sizing: auto;
   font-weight: 400;
-}
-.box {
-  background-color: rgba(0, 0, 0, 0.66);
-  color: white;
-  border: solid 2px rgb(252, 215, 255);
-  box-shadow: 0 0 5px 1px rgba(247, 164, 255, 0.5);
 }

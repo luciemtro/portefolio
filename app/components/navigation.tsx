@@ -4,7 +4,7 @@ export default function Navigation() {
       className="navigation z-20 fixed"
       aria-label="Menu de navigation principal"
     >
-      <ul className="navigation-list px-4 py-2 flex gap-5 box font-basic ">
+      <ul className="navigation-list px-4 py-2 flex gap-5 font-basic ">
         <li>
           <a href="#header" className="navigation-link">
             Accueil
