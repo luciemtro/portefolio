@@ -1,6 +1,5 @@
 .experiences {
-  background-image: url("./images/experiences-image-large.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left;
+  background-image: url("./images/experience-image.webp");
 }

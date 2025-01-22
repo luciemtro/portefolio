@@ -109,7 +109,7 @@
 
 .card.animated {
   &:before {
-    animation: holoGradient 6.5s ease 0s infinite alternate-reverse;
+    animation: holoGradient 5s ease infinite alternate-reverse;
   }
 }
 
@@ -117,10 +117,10 @@
   0% {
     background-position: 100% 100%;
     opacity: 1;
-    filter: brightness(0.75) contrast(1.15);
+    filter: brightness(0.75) contrast(1.2);
   }
   100% {
-    opacity: 0.9;
+    opacity: 0.5;
     background-position: 50% 50%;
     filter: brightness(0.55) contrast(1);
   }
