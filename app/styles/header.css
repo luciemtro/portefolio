@@ -38,7 +38,7 @@
       transparent 50%,
       rgba(0, 0, 0, 0.579)
     ),
-    url("./images/header.webp");
+    url("/images/header.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
