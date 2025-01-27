@@ -1,28 +1,8 @@
-.experiences {
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.container_avatars {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.397);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* Nécessaire pour le layout fill */
-  overflow: hidden; /* Pour éviter les débordements */
-}
-.carroussel_description {
-  max-width: 80%;
+.container-text-article-experiences {
+  color: black;
 }
 
 @media screen and (max-width: 768px) {
-  .container_avatars {
-    width: 100px;
-    height: 100px;
-  }
   .carroussel_description {
     max-width: 100%;
   }

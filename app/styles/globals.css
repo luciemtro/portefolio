@@ -27,8 +27,13 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
   overflow-x: hidden;
+  background-image: linear-gradient(
+    rgb(109, 53, 105) 10%,
+    rgb(43, 25, 69),
+    rgb(101, 39, 93),
+    rgb(52, 16, 72)
+  );
 }
 * {
   box-sizing: border-box;
