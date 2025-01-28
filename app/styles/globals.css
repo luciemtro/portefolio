@@ -29,10 +29,10 @@ body {
   color: var(--foreground);
   overflow-x: hidden;
   background-image: linear-gradient(
-    rgb(109, 53, 105) 10%,
-    rgb(43, 25, 69),
-    rgb(101, 39, 93),
-    rgb(52, 16, 72)
+    rgb(113, 45, 109) 10%,
+    rgb(245, 227, 255),
+    rgb(137, 84, 130),
+    rgb(245, 227, 255)
   );
 }
 * {
@@ -49,6 +49,7 @@ html {
   font-weight: 400;
   letter-spacing: 3px;
   font-size: 4rem;
+  text-shadow: 1px 1px 6px rgb(0, 0, 0);
 }
 .font-basic {
   font-family: "Rubik", serif;

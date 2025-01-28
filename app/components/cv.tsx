@@ -1,16 +1,21 @@
 export default function Cv() {
   return (
-    <section id="cv" className="cv h-screen w-screen flex flex-col p-4">
-      {/* Titre */}
-      <h2 className="font-title text-2xl text-center">Mon Curriculum Vitae</h2>
-
-      <a
-        href="https://github.com/luciemtro/portefolio/raw/main/app/components/cvluciemonteiro.pdf"
-        download="cvluciemonteiro.pdf"
-        className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
-      >
-        Télécharger mon cv en PDF
-      </a>
+    <section
+      id="cv"
+      className="cv h-screen w-screen flex flex-col p-4 items-center"
+    >
+      <h2 className="font-title text-2xl text-center mb-10">
+        Mon Curriculum Vitae
+      </h2>
+      <div className="cloud-download flex items-center justify-center">
+        <a
+          href="https://github.com/luciemtro/portefolio/raw/main/app/components/cvluciemonteiro.pdf"
+          download="cvluciemonteiro.pdf"
+          className=" p-20 text-black text-center mb-5 uppercase"
+        >
+          Télécharger mon cv en PDF
+        </a>
+      </div>
     </section>
   );
 }

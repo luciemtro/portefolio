@@ -1,0 +1,6 @@
+.cloud-download {
+  background-image: url("/images/cloud.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
