@@ -24,10 +24,10 @@
 }
 
 :root {
-  --color1: rgba(255, 238, 250, 0.808);
-  --color2: rgba(134, 83, 83, 0.421);
+  --colorone: rgba(255, 238, 250, 0.808);
+  --colortwo: rgba(134, 83, 83, 0.421);
 }
-.card {
+.card-header {
   position: relative;
   z-index: 10;
   touch-action: none;
@@ -45,8 +45,8 @@
   transform-origin: center;
 }
 
-.card:before,
-.card:after {
+.card-header:before,
+.card-header:after {
   content: "";
   position: absolute;
   left: 0;
@@ -57,15 +57,15 @@
   mix-blend-mode: color-dodge;
 }
 
-.card:before {
+.card-header:before {
   background-position: 50% 50%;
   background-size: 200% 200%;
   background-image: linear-gradient(
     115deg,
     transparent 0%,
-    var(--color1) 25%,
+    var(--colorone) 25%,
     transparent 47%,
-    var(--color2) 53%,
+    var(--colortwo) 53%,
 
     transparent 100%
   );
@@ -74,7 +74,7 @@
   z-index: 1;
 }
 
-.card:after {
+.card-header:after {
   opacity: 1;
   background-image: url("https://assets.codepen.io/13471/sparkles.gif");
   background-position: 20% 100%;
@@ -88,32 +88,32 @@
   opacity: 0.4;
 }
 @media screen and (max-width: 600px) {
-  .card:after {
+  .card-header:after {
     background-size: cover;
   }
 }
 
-.card.active:before,
-.card:before {
+.card-header.active:before,
+.card-header:before {
   animation: none;
   background-image: linear-gradient(
     110deg,
     transparent 25%,
-    var(--color1) 40%,
-    var(--color2) 52%,
+    var(--colorone) 40%,
+    var(--colortwo) 52%,
     transparent 75%
   );
   background-position: 50% 50%;
   background-size: 100%;
 }
 
-.card.animated {
+.card-header.animated-header {
   &:before {
-    animation: holoGradient 5s ease infinite alternate-reverse;
+    animation: holoGradient-header 5s ease infinite alternate-reverse;
   }
 }
 
-@keyframes holoGradient {
+@keyframes holoGradient-header {
   0% {
     background-position: 100% 100%;
     opacity: 1;

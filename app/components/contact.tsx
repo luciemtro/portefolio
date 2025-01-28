@@ -48,34 +48,51 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="contact h-screen w-screen">
-      <h2 className="font-title text-center">Mon contact</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div>
-          <label htmlFor="name">Nom</label>
+    <section
+      id="contact"
+      className="contact h-screen w-screen flex flex-col items-center"
+    >
+      <h2 className="font-title text-center mb-10">Mon contact</h2>
+      <form
+        onSubmit={handleSubmit}
+        className="contact-form flex flex-col gap-5 bg-white p-5 rounded-lg"
+      >
+        <div className=" flex flex-col gap-2">
+          <label htmlFor="name" className="text-black">
+            Nom
+          </label>
           <input
             type="text"
             name="name"
             value={formData.name}
+            className="border-black border-2 h-10 rounded-md"
             onChange={handleChange}
             required
           />
         </div>
-        <div>
-          <label htmlFor="email">Email</label>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="email" className="text-black">
+            Email
+          </label>
           <input
             type="email"
             name="email"
             value={formData.email}
+            className="border-black border-2 h-10 rounded-md "
             onChange={handleChange}
             required
           />
         </div>
-        <div>
-          <label htmlFor="message">Message</label>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="message" className="text-black">
+            Message
+          </label>
           <textarea
+            rows={10}
             name="message"
             value={formData.message}
+            className="border-black border-2 rounded-md "
+            style={{ resize: "none" }}
             onChange={handleChange}
             required
           />

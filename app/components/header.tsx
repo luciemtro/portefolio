@@ -5,8 +5,8 @@ export default function Header() {
       className="header h-screen w-screen"
       aria-label="Section d'accueil"
     >
-      <article className="cards h-screen w-screen">
-        <header className="card animated eeve h-screen w-screen">
+      <article className="cards-header h-screen w-screen">
+        <header className="card-header animated-header eeve h-screen w-screen">
           {/* Conteneur texte */}
           <div className="container-text-header absolute">
             <h1 className="header-title font-title">
