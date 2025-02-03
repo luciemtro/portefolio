@@ -2,47 +2,78 @@
   --color1: rgb(0, 231, 255);
   --color2: rgb(255, 0, 231);
   --back: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
-  --charizard1: #fac;
-  --charizard2: #ddccaa;
-  --charizardfront: url(https://assets.codepen.io/13471/charizard-gx.webp);
-  --pika1: #54a29e;
-  --pika2: #a79d66;
-  --pikafront: url(https://assets.codepen.io/13471/pikachu-gx.webp);
-  --eevee1: #efb2fb;
-  --eevee2: #acc6f8;
-  --eeveefront: url(https://assets.codepen.io/13471/eevee-gx.webp);
-  --mewtwo1: #efb2fb;
-  --mewtwo2: #acc6f8;
-  --mewtwofront: url(https://assets.codepen.io/13471/mewtwo-gx.webp);
+  --js1: #efb2fb;
+  --js2: #acc6f8;
+  --jsfront: url("/images/techskills/js.jpg");
+  --next1: #efb2fb;
+  --next2: #acc6f8;
+  --nextfront: url("/images/techskills/next.jpg");
+  --html1: #efb2fb;
+  --html2: #acc6f8;
+  --htmlfront: url("/images/techskills/html.jpg");
+  --css1: #efb2fb;
+  --css2: #acc6f8;
+  --cssfront: url("/images/techskills/css.jpg");
+  --sass1: #efb2fb;
+  --sass2: #acc6f8;
+  --sassfront: url("/images/techskills/sass.jpg");
+  --sql1: #efb2fb;
+  --sql2: #acc6f8;
+  --sqlfront: url("/images/techskills/sql.jpg");
+  --node1: #efb2fb;
+  --node2: #acc6f8;
+  --nodefront: url("/images/techskills/node.jpg");
+  --react1: #efb2fb;
+  --react2: #acc6f8;
+  --reactfront: url("/images/techskills/react.jpg");
+  --csharp1: #efb2fb;
+  --csharp2: #acc6f8;
+  --csharpfront: url("/images/techskills/csharp.jpg");
+  --entity1: #efb2fb;
+  --entity2: #acc6f8;
+  --entityfront: url("/images/techskills/entity.jpg");
+  --asp1: #efb2fb;
+  --asp2: #acc6f8;
+  --aspfront: url("/images/techskills/asp.jpg");
+  --ts1: #efb2fb;
+  --ts2: #acc6f8;
+  --tsfront: url("/images/techskills/ts.jpg");
+  --drinksaver1: #efb2fb;
+  --drinksaver2: #acc6f8;
+  --drinksaverfront: url("/images/techskills/drinksaver.jpg");
+  --pokemon1: #efb2fb;
+  --pokemon2: #acc6f8;
+  --pokemonfront: url("/images/techskills/pokemon.jpg");
 }
 
 .card {
   width: 200px;
-  height: 300px;
-  width: clamp(200px, 61vh, 18vw);
-  height: clamp(280px, 85vh, 25.2vw);
-
+  height: 200px;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
   margin: 20px;
   overflow: hidden;
   z-index: 10;
   touch-action: none;
-
-  border-radius: 5% / 3.5%;
+  border-radius: 50%;
   box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2),
     -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent,
     0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
-
   transition: transform 0.5s ease, box-shadow 0.2s ease;
   will-change: transform, filter;
-
   background-color: #040712;
   background-image: var(--front);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transform-origin: center;
+}
+.card.drinksaver {
+  border-radius: 10%;
+}
+.card.pokemon {
+  border-radius: 10%;
 }
 
 .card:hover {
@@ -52,28 +83,76 @@
     0 55px 35px -20px rgba(0, 0, 0, 0.5);
 }
 
-.card.charizard {
-  --color1: var(--charizard1);
-  --color2: var(--charizard2);
-  --front: var(--charizardfront);
+.card.html {
+  --color1: var(--html1);
+  --color2: var(--html2);
+  --front: var(--htmlfront);
 }
-.card.pika {
-  --color1: var(--pika1);
-  --color2: var(--pika2);
-  --front: var(--pikafront);
+.card.css {
+  --color1: var(--css1);
+  --color2: var(--css2);
+  --front: var(--cssfront);
 }
-.card.mewtwo {
-  --color1: var(--mewtwo1);
-  --color2: var(--mewtwo2);
-  --front: var(--mewtwofront);
+.card.sass {
+  --color1: var(--sass1);
+  --color2: var(--sass2);
+  --front: var(--sassfront);
 }
-.card.eevee {
-  --color1: #ec9bb6;
-  --color2: #ccac6f;
-  --color3: #69e4a5;
-  --color4: #8ec5d6;
-  --color5: #b98cce;
-  --front: var(--eeveefront);
+
+.card.js {
+  --color1: var(--js1);
+  --color2: var(--js2);
+  --front: var(--jsfront);
+}
+.card.next {
+  --color1: var(--next1);
+  --color2: var(--next2);
+  --front: var(--nextfront);
+}
+.card.sql {
+  --color1: var(--sql1);
+  --color2: var(--sql2);
+  --front: var(--sqlfront);
+}
+.card.node {
+  --color1: var(--node1);
+  --color2: var(--node2);
+  --front: var(--nodefront);
+}
+.card.react {
+  --color1: var(--react1);
+  --color2: var(--react2);
+  --front: var(--reactfront);
+}
+.card.csharp {
+  --color1: var(--csharp1);
+  --color2: var(--csharp2);
+  --front: var(--csharpfront);
+}
+.card.entity {
+  --color1: var(--entity1);
+  --color2: var(--entity2);
+  --front: var(--entityfront);
+}
+.card.asp {
+  --color1: var(--asp1);
+  --color2: var(--asp2);
+  --front: var(--aspfront);
+}
+.card.ts {
+  --color1: var(--ts1);
+  --color2: var(--ts2);
+  --front: var(--tsfront);
+}
+.card.drinksaver {
+  --color1: var(--drinksaver1);
+  --color2: var(--drinksaver2);
+  --front: var(--drinksaverfront);
+}
+.card.pokemon {
+  --color1: var(--pokemon1);
+  --color2: var(--pokemon2);
+  --front: var(--pokemonfront);
 }
 
 .card:before,
@@ -265,24 +344,6 @@
   }
 }
 
-.card.eevee:hover {
-  box-shadow: 0 0 30px -5px white, 0 0 10px -2px white,
-    0 55px 35px -20px rgba(0, 0, 0, 0.5);
-}
-.card.eevee:hover:before,
-.card.eevee.active:before {
-  background-image: linear-gradient(
-    115deg,
-    transparent 20%,
-    var(--color1) 36%,
-    var(--color2) 43%,
-    var(--color3) 50%,
-    var(--color4) 57%,
-    var(--color5) 64%,
-    transparent 80%
-  );
-}
-
 .operator {
   display: inline-block;
   vertical-align: middle;
@@ -357,16 +418,5 @@
 
   to {
     transform: scale3d(1, 1, 1);
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .card {
-    width: 61vh;
-    height: 85vh;
-    max-width: 500px;
-    max-height: 700px;
-    width: clamp(12.9vw, 61vh, 18vw);
-    height: clamp(18vw, 85vh, 25.2vw);
   }
 }

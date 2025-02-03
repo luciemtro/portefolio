@@ -50,7 +50,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="contact h-screen w-screen flex flex-col items-center"
+      className="contact min-h-screen w-screen flex flex-col items-center"
     >
       <h2 className="font-title text-center mb-10">Mon contact</h2>
       <form
@@ -58,33 +58,33 @@ export default function Contact() {
         className="contact-form flex flex-col gap-5 bg-white p-5 rounded-lg"
       >
         <div className=" flex flex-col gap-2">
-          <label htmlFor="name" className="text-black">
+          <label htmlFor="name" className="text-black font-basic">
             Nom
           </label>
           <input
             type="text"
             name="name"
             value={formData.name}
-            className="border-black border-2 h-10 rounded-md"
+            className="border-black border-2 h-10 rounded-md font-basic"
             onChange={handleChange}
             required
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="text-black">
+          <label htmlFor="email" className="text-black font-basic">
             Email
           </label>
           <input
             type="email"
             name="email"
             value={formData.email}
-            className="border-black border-2 h-10 rounded-md "
+            className="border-black border-2 h-10 rounded-md font-basic"
             onChange={handleChange}
             required
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="message" className="text-black">
+          <label htmlFor="message" className="text-black font-basic">
             Message
           </label>
           <textarea
@@ -97,7 +97,9 @@ export default function Contact() {
             required
           />
         </div>
-        <button type="submit">Envoyer</button>
+        <button type="submit" className="font-basic">
+          Envoyer
+        </button>
       </form>
       {successMessage && <p>{successMessage}</p>}
       {errorMessage && <p>{errorMessage}</p>}

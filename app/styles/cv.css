@@ -3,4 +3,8 @@
   background-size: cover;
   width: 300px;
   height: 300px;
+  transition: 0.3s ease-in-out;
+}
+.cloud-download:hover {
+  transform: scale(1.1);
 }

@@ -1,32 +1,9 @@
-.header-title {
-  animation: translateX 1.5s 0.5s forwards;
-}
-.header-subtitle {
-  animation: translateX 1.8s 0.5s forwards;
-}
-.header-p {
-  animation: translateX 2s 0.5s forwards;
-}
-.container-text-header {
-  left: 6%;
-  top: 10%;
-  transform: translateX(200%);
-  animation: translateX 1s 0.5s forwards;
-}
-
-@keyframes translateX {
-  0% {
-    transform: translateX(200%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
 :root {
   --colorone: rgba(255, 238, 250, 0.808);
   --colortwo: rgba(134, 83, 83, 0.421);
 }
+
+/* Styles pour le card-header avec le premier fond */
 .card-header {
   position: relative;
   z-index: 10;
@@ -66,7 +43,6 @@
     var(--colorone) 25%,
     transparent 47%,
     var(--colortwo) 53%,
-
     transparent 100%
   );
   opacity: 0.5;
@@ -87,12 +63,94 @@
   filter: brightness(1) contrast(1);
   opacity: 0.4;
 }
+
+/* Styles pour le card-header2 avec le second fond */
+.card-header2 {
+  background-image: linear-gradient(
+      95deg,
+      rgba(0, 0, 0, 0.784),
+      transparent 50%,
+      rgba(0, 0, 0, 0.579)
+    ),
+    url("/images/header2.webp");
+}
+
+.card-header2:before,
+.card-header2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+}
+
+.card-header2:before {
+  background-position: 50% 50%;
+  background-size: 200% 200%;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    var(--colorone) 25%,
+    transparent 47%,
+    var(--colortwo) 53%,
+    transparent 100%
+  );
+  opacity: 0.5;
+  filter: brightness(0.5) contrast(1);
+  z-index: 1;
+}
+
+.card-header2:after {
+  opacity: 1;
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif");
+  background-position: 20% 100%;
+  background-size: 15%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  z-index: 2;
+  mix-blend-mode: color-dodge;
+  filter: brightness(1) contrast(1);
+  opacity: 0.4;
+}
+
 @media screen and (max-width: 600px) {
-  .card-header:after {
+  .card-header:after,
+  .card-header2:after {
     background-size: cover;
   }
 }
 
+/* Animation pour le texte */
+.header-title {
+  animation: translateX 1.5s 0.5s forwards;
+}
+.header-subtitle {
+  animation: translateX 1.8s 0.5s forwards;
+}
+.header-p {
+  animation: translateX 2s 0.5s forwards;
+}
+.container-text-header {
+  left: 6%;
+  top: 50%;
+  transform: translateX(200%);
+  animation: translateX 1s 0.5s forwards;
+}
+
+@keyframes translateX {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Animation pour les transitions */
 .card-header.active:before,
 .card-header:before {
   animation: none;
@@ -107,10 +165,9 @@
   background-size: 100%;
 }
 
-.card-header.animated-header {
-  &:before {
-    animation: holoGradient-header 5s ease infinite alternate-reverse;
-  }
+.card-header.animated-header:before,
+.card-header2.animated-header:before {
+  animation: holoGradient-header 5s ease infinite alternate-reverse;
 }
 
 @keyframes holoGradient-header {

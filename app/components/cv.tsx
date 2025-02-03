@@ -11,7 +11,7 @@ export default function Cv() {
         <a
           href="https://github.com/luciemtro/portefolio/raw/main/app/components/cvluciemonteiro.pdf"
           download="cvluciemonteiro.pdf"
-          className=" p-20 text-black text-center mb-5 uppercase"
+          className=" p-20 text-black text-center mb-5 uppercase font-basic"
         >
           Télécharger mon cv en PDF
         </a>

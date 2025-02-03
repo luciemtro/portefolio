@@ -138,13 +138,23 @@ export default function Experiences() {
               }}
             >
               <div className="container-text-article-experiences flex p-6">
-                <h3 className="bg-[rgba(255,255,255,0.7)]">{exp.title}</h3>
-                <h4 className="bg-[rgba(255,255,255,0.7)]">{exp.entreprise}</h4>
-                <p className="bg-[rgba(255,255,255,0.7)]">{exp.lieu}</p>
+                <h3 className="bg-[rgba(255,255,255,0.7)] font-basic">
+                  {exp.title}
+                </h3>
+                <h4 className="bg-[rgba(255,255,255,0.7)] font-basic">
+                  {exp.entreprise}
+                </h4>
+                <p className="bg-[rgba(255,255,255,0.7)] font-basic">
+                  {exp.lieu}
+                </p>
                 {exp.date && (
-                  <p className="bg-[rgba(255,255,255,0.7)]">{exp.date}</p>
+                  <p className="bg-[rgba(255,255,255,0.7)] font-basic">
+                    {exp.date}
+                  </p>
                 )}
-                <p className="bg-[rgba(255,255,255,0.7)]">{exp.description}</p>
+                <p className="bg-[rgba(255,255,255,0.7)] font-basic">
+                  {exp.description}
+                </p>
               </div>
             </article>
           </SwiperSlide>

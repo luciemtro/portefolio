@@ -1,11 +1,13 @@
 export default function About() {
   return (
-    <section id="about" className="about h-screen w-screen">
+    <section id="about" className="about min-h-screen w-screen">
       <h2 className="font-title text-center">A propos</h2>
       <article className="flex flex-col items-center justify-center gap-10 mx-20">
         <header>
-          <h3 className="mb-5">Bonjour et bienvenue sur mon portfolio ! 👩‍💻</h3>
-          <p>
+          <h3 className="mb-5 font-basic">
+            Bonjour et bienvenue sur mon portfolio ! 👩‍💻
+          </h3>
+          <p className="font-basic">
             {" "}
             Actuellement en formation en développement web, je suis passionnée
             par tout ce qui touche à la création et à l’innovation numérique.
@@ -15,7 +17,7 @@ export default function About() {
           </p>
         </header>
         <section>
-          <p>
+          <p className="font-basic">
             {" "}
             Je suis à un moment excitant de mon parcours, prête à quitter le
             cadre académique pour plonger dans le grand bain du marché de
@@ -23,7 +25,7 @@ export default function About() {
             relever des défis concrets et d’apprendre encore et toujours auprès
             de personnes inspirantes.
           </p>
-          <p>
+          <p className="font-basic">
             {" "}
             Polyvalente, curieuse et toujours partante pour découvrir de
             nouvelles technologies, je suis ouverte à tous types de projets, que
@@ -33,7 +35,7 @@ export default function About() {
           </p>
         </section>
         <footer>
-          <p>
+          <p className="font-basic">
             {" "}
             Si tu cherches quelqu’un de motivé, enthousiaste et prêt à coder
             avec passion, tu es au bon endroit ! 😊

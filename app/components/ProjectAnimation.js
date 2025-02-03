@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 import $ from "jquery";
 
-const CardAnimation = () => {
+const ProjectAnimation = () => {
   useEffect(() => {
     var x;
     var $cards = $(".card");
@@ -65,23 +65,13 @@ const CardAnimation = () => {
     };
   }, []);
   return (
-    <div className="card-animation p-10">
-      <section className="cards flex flex-wrap justify-center mb-20">
-        <div className="card html animated"></div>
-        <div className="card css animated"></div>
-        <div className="card sass animated"></div>
-        <div className="card js animated"></div>
-        <div className="card react animated"></div>
-        <div className="card next animated"></div>
-        <div className="card node animated"></div>
-        <div className="card ts animated"></div>
-        <div className="card csharp animated"></div>
-        <div className="card entity animated"></div>
-        <div className="card asp animated"></div>
-        <div className="card sql animated"></div>
+    <div className="card-animation">
+      <section className="cards flex flex-wrap justify-center">
+        <div className="card pokemon animated"></div>
+        <div className="card drinksaver animated"></div>
       </section>
     </div>
   );
 };
 
-export default CardAnimation;
+export default ProjectAnimation;
