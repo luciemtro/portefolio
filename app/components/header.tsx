@@ -1,23 +1,74 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
+
+// Hook pour précharger les images
+const usePreloadImages = (imageList: string[]) => {
+  useEffect(() => {
+    const preloadImages = async () => {
+      const promises = imageList.map((image) => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = image;
+          img.onload = resolve;
+        });
+      });
+      await Promise.all(promises);
+    };
+
+    preloadImages();
+  }, [imageList]);
+};
 
 export default function Header() {
   const [isGlitching, setIsGlitching] = useState(false);
+  const [imageIndex, setImageIndex] = useState(0);
 
+  // Tableau des images
+  const images = [
+    "/images/header.webp",
+    "/images/header2.webp",
+    "/images/header.webp",
+    "/images/header3.webp",
+  ];
+
+  // Utilisation du hook pour précharger les images
+  usePreloadImages(images);
+
+  // Durée d'affichage en millisecondes pour chaque image
+  const displayDurations = useMemo(() => [6000, 1000, 8000, 1000], []);
+
+  // Animation de glitch sur le header
   useEffect(() => {
     const glitchEffect = () => {
       setIsGlitching(true);
-      setTimeout(() => setIsGlitching(false), 500); // 0.5s de transition
-
-      // Changer le prochain glitch à un intervalle aléatoire entre 5 et 10 secondes
-      const nextGlitch = Math.random() * (15000 - 10000) + 5000; // 5 à 10 secondes
-      setTimeout(glitchEffect, nextGlitch);
+      setTimeout(() => {
+        setIsGlitching(false);
+        // Changer l'image après l'effet de glitch
+        setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 300); // Durée de l'effet de glitch
     };
 
-    const timeout = setTimeout(glitchEffect, 5000); // Premier glitch après 5s
+    // Début de l'animation après 1.5 secondes
+    const timeout = setTimeout(() => {
+      glitchEffect();
+    }, 1500);
 
-    return () => clearTimeout(timeout); // Nettoyage à l'unmount
-  }, []);
+    return () => {
+      clearTimeout(timeout); // Nettoyage à l'unmount
+    };
+  }, [imageIndex, images.length, displayDurations]);
+
+  // Sélection de la classe CSS appropriée
+  const currentClassName =
+    imageIndex === 0
+      ? "card-header"
+      : imageIndex === 1
+      ? "card-header2"
+      : imageIndex === 2
+      ? "card-header"
+      : imageIndex === 3
+      ? "card-header3"
+      : "";
 
   return (
     <section
@@ -27,18 +78,16 @@ export default function Header() {
     >
       <article className="min-h-screen w-screen">
         <header
-          className={`card-header relative h-screen w-screen transition-all duration-500 ${
-            isGlitching ? "card-header2" : "card-header"
+          className={`relative h-screen w-screen transition-all duration-500 ${currentClassName} ${
+            isGlitching ? "active" : ""
           }`}
         >
           <div className="container-text-header absolute">
-            <h1 className="header-title font-title">
-              Bienvenue, je suis Lucie
-            </h1>
-            <h2 className="header-subtitle font-basic text-2xl uppercase">
-              Développeuse Web
+            <h1 className="header-title font-title">Bienvenue !</h1>
+            <h2 className="header-subtitle font-basic text-3xl">
+              Je m&apos;appelle Lucie, Développeuse Web
             </h2>
-            <p className="font-basic text-lg pt-2 pb-4 header-p">
+            <p className="font-basic text-2xl pt-2 pb-4 header-p">
               Découvrez mon univers à travers mes projets !
             </p>
           </div>

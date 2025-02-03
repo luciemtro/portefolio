@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Genos:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Zen+Dots&display=swap");
 @import "header.css";
 @import "navigation.css";
 @import "about.css";
@@ -45,7 +45,8 @@ html {
 }
 
 .font-title {
-  font-family: "Changa One", serif;
+  font-family: "Zen Dots", serif;
+  font-stretch: condensed;
   font-weight: 400;
   font-size: 4rem;
   text-shadow: 1px 1px 6px rgb(0, 0, 0);
