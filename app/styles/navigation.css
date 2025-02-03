@@ -1,5 +1,7 @@
 .navigation-list {
   width: fit-content;
+  background-color: rgba(3, 0, 4, 0.771);
+  border: 1px solid #b300ff;
 }
 .navigation {
   bottom: 5%;

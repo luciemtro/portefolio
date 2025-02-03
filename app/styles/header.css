@@ -13,9 +13,9 @@
   will-change: transform, filter;
   background-image: linear-gradient(
       95deg,
-      rgba(0, 0, 0, 0.963),
+      rgb(7, 0, 10),
       transparent 60%,
-      rgba(0, 0, 0, 0.963)
+      rgb(7, 0, 10)
     ),
     url("/images/header.webp");
   background-size: cover;
@@ -23,22 +23,23 @@
   background-position: 50% 50%;
 }
 
-.card-header2 {
+.card-header2,
+.card-header3 {
   background-image: linear-gradient(
       95deg,
-      rgba(0, 0, 0, 0.934),
+      rgb(7, 0, 10),
       transparent 60%,
-      rgba(0, 0, 0, 0.775)
+      rgb(7, 0, 10)
     ),
     url("/images/header2.webp");
-  transform: saturate(3) contrast(1.2);
+  transform: saturate(5) contrast(3);
 }
 .card-header3 {
   background-image: linear-gradient(
       95deg,
-      rgba(0, 0, 0, 0.934),
+      rgb(7, 0, 10),
       transparent 60%,
-      rgba(0, 0, 0, 0.775)
+      rgb(7, 0, 10)
     ),
     url("/images/header3.webp");
   transform: saturate(3) contrast(1.2);
@@ -91,6 +92,8 @@
   transform: translateX(200%);
   animation-delay: 0.5s;
   padding: 3rem;
+  top: 35%;
+  left: 3%;
 }
 
 /* Animation for transitions */
@@ -99,10 +102,10 @@
   animation: none;
   background-image: linear-gradient(
     110deg,
-    transparent 25%,
-    var(--colorone) 40%,
+    rgb(7, 0, 10),
+    var(--colorone) 45%,
     var(--colortwo) 52%,
-    transparent 75%
+    rgb(7, 0, 10)
   );
   background-position: 50% 50%;
   background-size: 100%;
