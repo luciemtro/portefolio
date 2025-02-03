@@ -31,8 +31,9 @@ body {
   background-image: linear-gradient(
     rgb(0, 0, 0),
     rgb(32, 4, 48),
+    rgb(9, 0, 14),
     rgb(1, 1, 1),
-    rgb(32, 4, 48)
+    rgb(13, 1, 20)
   );
 }
 * {

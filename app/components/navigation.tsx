@@ -6,7 +6,7 @@ export default function Navigation() {
     >
       {/* Span lumineux qui tourne autour */}
       <span className="nav-glow"></span>
-      <ul className="navigation-list px-5 py-4 flex gap-6 font-basic">
+      <ul className="navigation-list px-5 py-2 flex gap-6 font-basic">
         <li>
           <a href="#header" className="navigation-link">
             Accueil

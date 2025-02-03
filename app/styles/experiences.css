@@ -7,3 +7,129 @@
     max-width: 100%;
   }
 }
+.carousel-article {
+  box-shadow: inset 0 0 10px rgb(13, 0, 21), inset 0 0 20px rgb(13, 0, 21),
+    inset 0 0 40px rgb(13, 0, 21);
+}
+.carousel-article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent 40%,
+    rgba(242, 0, 255, 0.3) 50%,
+    transparent 60%
+  );
+}
+.bg-text-carousel {
+  background-color: rgba(13, 0, 21, 0.753);
+  color: white;
+}
+.title-carousel {
+  font-size: 30px !important;
+}
+/* 💎 Conteneur pagination */
+.swiper-pagination {
+  display: flex !important;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  gap: 15px; /* Espacement entre les bullets */
+}
+
+/* 💜 Bullets en diamant */
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background: transparent;
+  border: 2px solid rgba(183, 0, 255, 0.6); /* Bordure néon */
+  transform: rotate(45deg); /* Rotation pour un effet diamant */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    background 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+/* ✨ Effet glow & glitch */
+.swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 255, 0.4) !important; /* Couleur néon */
+  filter: blur(6px);
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* 🚀 Animation du bullet actif */
+.swiper-pagination-bullet-active {
+  background: #ff00ff !important; /* Couleur néon */
+  border-color: #ff00ff;
+  transform: scale(1.6) rotate(45deg); /* Zoom + rotation */
+  box-shadow: 0 0 15px #ff00ff, 0 0 30px #ff00ff, 0 0 45px #ff00ff;
+}
+
+/* Ajout de l'effet glitch */
+.swiper-pagination-bullet-active::before {
+  opacity: 1;
+  animation: glitch 0.5s infinite alternate ease-in-out;
+}
+
+/* 🎭 Animation glitch */
+@keyframes glitch {
+  0% {
+    transform: translateX(-2px) translateY(2px);
+  }
+  100% {
+    transform: translateX(2px) translateY(-2px);
+  }
+}
+
+/* Style de base des flèches */
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgba(255, 0, 255, 0.4) !important;
+  text-shadow: 0 0 15px #ff00ff, 0 0 30px rgba(255, 0, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Effet hover */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #ff00ff !important;
+  text-shadow: 0 0 25px #ff00ff, 0 0 50px rgba(255, 0, 255, 0.7);
+  transform: scale(1.2);
+}
+
+/* Icônes des flèches */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 30px !important;
+  font-weight: bold;
+}
+
+/* Flèche gauche (prev) */
+.swiper-button-prev::after {
+  content: "←"; /* Flèche gauche */
+}
+
+/* Flèche droite (next) */
+.swiper-button-next::after {
+  content: "→";
+}
