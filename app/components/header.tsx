@@ -35,7 +35,7 @@ export default function Header() {
   usePreloadImages(images);
 
   // Durée d'affichage en millisecondes pour chaque image
-  const displayDurations = useMemo(() => [6000, 1000, 8000, 1000], []);
+  const displayDurations = useMemo(() => [3000, 500, 4000, 500], []); // Durées ajustées : premier header 8000ms, header 2 et 3 2000ms
 
   // Animation de glitch sur le header
   useEffect(() => {
@@ -48,10 +48,10 @@ export default function Header() {
       }, 300); // Durée de l'effet de glitch
     };
 
-    // Début de l'animation après 1.5 secondes
+    // Gestion du timing pour changer d'image
     const timeout = setTimeout(() => {
       glitchEffect();
-    }, 1500);
+    }, displayDurations[imageIndex]); // Utilisation de la durée d'affichage
 
     return () => {
       clearTimeout(timeout); // Nettoyage à l'unmount
@@ -78,7 +78,7 @@ export default function Header() {
     >
       <article className="min-h-screen w-screen">
         <header
-          className={`relative h-screen w-screen transition-all duration-500 ${currentClassName} ${
+          className={`relative h-screen w-screen transition-all ${currentClassName} ${
             isGlitching ? "active" : ""
           }`}
         >
