@@ -35,7 +35,8 @@ export default function Experiences() {
     {
       id: "nomad",
       title: "Coloriste Coiffeuse",
-      lieu: "Nomad Style Lausanne, CH",
+      entreprise: "Nomad Style",
+      lieu: "Lausanne, CH",
       description:
         "Spécialiste en coloration, coupe, brushing et soins capillaires, offrant des conseils personnalisés à chaque cliente. Ce rôle a également impliqué la gestion des stocks, la prise de rendez-vous et l'accueil des clients dans un environnement dynamique et exigeant.",
       date: "Décembre 2018 à Août 2021",
@@ -152,8 +153,9 @@ export default function Experiences() {
               <div className="container-text-article-experiences bg-text-carousel p-6 min-w-[300] max-w-[600]">
                 <img src={exp.avatar} alt="" className="w-28 h-28" />
                 <h3 className=" font-title title-carousel">{exp.title}</h3>
-                <h4 className="font-basic">{exp.entreprise}</h4>
-                <p className=" font-basic">{exp.lieu}</p>
+                <h4 className="font-basic">
+                  {exp.entreprise}, {exp.lieu}
+                </h4>
                 {exp.date && <p className=" font-basic">{exp.date}</p>}
                 <p className=" font-basic">{exp.description}</p>
               </div>
