@@ -1,5 +1,10 @@
+#experiences {
+  padding-bottom: 100px;
+}
 .container-text-article-experiences {
   color: black;
+  min-width: 300px;
+  max-width: 600px;
 }
 
 @media screen and (max-width: 768px) {

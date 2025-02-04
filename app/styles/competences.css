@@ -42,6 +42,9 @@
   --pokemon2: #e7e700;
   --pokemonfront: url("/images/techskills/pokemon.svg");
 }
+#competences {
+  padding: 100px 0;
+}
 
 .card {
   width: 170px;

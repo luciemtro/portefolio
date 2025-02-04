@@ -150,7 +150,7 @@ export default function Experiences() {
                 opacity: activeIndex === index ? 1 : 0.7,
               }}
             >
-              <div className="container-text-article-experiences bg-text-carousel p-6 min-w-[300] max-w-[600]">
+              <div className="container-text-article-experiences bg-text-carousel p-6">
                 <img src={exp.avatar} alt="" className="w-28 h-28" />
                 <h3 className=" font-title title-carousel">{exp.title}</h3>
                 <h4 className="font-basic">
