@@ -1,8 +1,17 @@
 #contact {
-  padding-bottom: 120px;
+  padding-bottom: 150px;
 }
 .contact-form {
   width: 70%;
+}
+.champs {
+  transition: border-color 0.3s ease;
+  outline: none;
+  padding: 10px;
+}
+.champs:focus {
+  border: 3px solid #b300ff;
+  box-shadow: 0 0 5px #b300ff, 0 0 10px #b300ff;
 }
 @media screen and (max-width: 768px) {
   .contact-form {

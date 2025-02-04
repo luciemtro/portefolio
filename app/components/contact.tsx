@@ -55,49 +55,52 @@ export default function Contact() {
       <h2 className="font-title text-center mb-10">Mon contact</h2>
       <form
         onSubmit={handleSubmit}
-        className="contact-form flex flex-col gap-5 bg-white p-5 rounded-lg"
+        className="contact-form flex flex-col gap-5"
       >
         <div className=" flex flex-col gap-2">
-          <label htmlFor="name" className="text-black font-basic">
+          <label htmlFor="name" className="text-white font-basic">
             Nom
           </label>
           <input
             type="text"
             name="name"
             value={formData.name}
-            className="border-black border-2 h-10 rounded-md font-basic"
+            className="border-[#b300ff] border-2 h-10 font-basic bg-transparent champs"
             onChange={handleChange}
             required
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="email" className="text-black font-basic">
+          <label htmlFor="email" className="text-white font-basic">
             Email
           </label>
           <input
             type="email"
             name="email"
             value={formData.email}
-            className="border-black border-2 h-10 rounded-md font-basic"
+            className="border-[#b300ff] border-2 h-10 font-basic bg-transparent champs"
             onChange={handleChange}
             required
           />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="message" className="text-black font-basic">
+          <label htmlFor="message" className="text-white font-basic">
             Message
           </label>
           <textarea
             rows={10}
             name="message"
             value={formData.message}
-            className="border-black border-2 rounded-md "
+            className="border-[#b300ff] border-2 bg-transparent champs"
             style={{ resize: "none" }}
             onChange={handleChange}
             required
           />
         </div>
-        <button type="submit" className="font-basic">
+        <button
+          type="submit"
+          className="font-basic button button--black scale uppercase"
+        >
           Envoyer
         </button>
       </form>

@@ -82,4 +82,5 @@ html {
 }
 .scale:hover {
   transform: scale(1.1);
+  text-shadow: 0 0 5px #b300ff, 0 0 10px #b300ff;
 }

@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section id="about" className="about w-screen">
-      <h2 className="font-title text-center pb-14">A propos</h2>
+      <h2 className="font-title text-center py-14 ">A propos</h2>
       <article className="flex flex-col items-center justify-center gap-10 mx-20">
         <header>
           <h3 className="mb-5 font-basic">
