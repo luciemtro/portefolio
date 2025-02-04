@@ -38,14 +38,14 @@
   --drinksaver1: #ff4d00;
   --drinksaver2: #b300ff;
   --drinksaverfront: url("/images/techskills/drinksaver.jpg");
-  --pokemon1: #fbff00;
-  --pokemon2: #ff0000;
-  --pokemonfront: url("/images/techskills/pokemon.jpg");
+  --pokemon1: #000dff;
+  --pokemon2: #e7e700;
+  --pokemonfront: url("/images/techskills/pokemon.svg");
 }
 
 .card {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -137,6 +137,7 @@
   --color1: var(--drinksaver1);
   --color2: var(--drinksaver2);
   --front: var(--drinksaverfront);
+  background-size: cover !important;
 }
 .card.pokemon {
   --color1: var(--pokemon1);
@@ -153,7 +154,7 @@
   background-position: 60% 60%;
 }
 .card.js:after {
-  background-position: 70% 70%;
+  background-position: 20% 20%;
 }
 .card.react:after {
   background-position: 30% 30%;

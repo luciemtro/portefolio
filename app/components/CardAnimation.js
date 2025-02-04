@@ -66,7 +66,7 @@ const CardAnimation = () => {
   }, []);
   return (
     <div className="card-animation p-10">
-      <section className="cards flex flex-wrap justify-center mb-20">
+      <div className="cards flex flex-wrap justify-center mb-20">
         <div className="card html animated"></div>
         <div className="card css animated"></div>
         <div className="card sass animated"></div>
@@ -78,7 +78,7 @@ const CardAnimation = () => {
         <div className="card csharp animated"></div>
         <div className="card asp animated"></div>
         <div className="card sql animated"></div>
-      </section>
+      </div>
     </div>
   );
 };

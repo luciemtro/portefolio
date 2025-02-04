@@ -1,41 +1,78 @@
 .navigation-list {
   width: fit-content;
   background-color: rgba(3, 0, 4, 0.771);
-  border: 1px solid #b300ff;
 }
+
 .navigation {
   bottom: 5%;
   left: 50%;
   transform: translateX(-50%);
 }
-@keyframes border-glow {
+
+.navigation-link {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  padding: 10px;
+  color: gray;
+  transition: color 0.3s;
+  font-size: 1.2rem;
+}
+.navigation-link.active {
+  color: rgba(0, 255, 242, 0.8) !important;
+  text-shadow: 0 0 10px rgba(0, 255, 242, 0.8), 0 0 20px rgba(0, 255, 242, 0.8),
+    0 0 30px rgba(0, 255, 242, 0.8);
+}
+@keyframes moveBall {
   0% {
-    clip-path: inset(0 100% 100% 0); /* Départ en haut à gauche */
-  }
-  20% {
-    clip-path: inset(0 0 100% 0); /* Balayage vers la droite */
-  }
-  45% {
-    clip-path: inset(0 0 0 100%); /* Descente vers le bas */
-  }
-  60% {
-    clip-path: inset(100% 0 0 0); /* Balayage vers la gauche */
-  }
-  75% {
-    clip-path: inset(
-      0 100% 0 0
-    ); /* Remontée vers le haut (retour au point de départ) */
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-30px); /* Augmenter la distance ici */
   }
   100% {
-    clip-path: inset(0 100% 100% 0); /* Départ en haut à gauche */
+    transform: translate(-50%, -50%) rotate(360deg) translateY(-30px); /* Augmenter la distance ici aussi */
   }
 }
 
-.nav-glow {
+.animate-ball {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 3.5px solid rgb(183, 0, 255);
-  animation: border-glow 4s linear infinite alternate-reverse;
-  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 12px; /* Taille de la boule */
+  height: 12px; /* Taille de la boule */
+  background-color: rgba(0, 255, 242, 0.8); /* Couleur de la boule */
+  box-shadow: 0 0 10px rgba(0, 255, 242, 0.8), 0 0 20px rgba(0, 255, 242, 0.8),
+    0 0 30px rgba(0, 255, 242, 0.8), 0 0 40px rgba(0, 255, 242, 0.8),
+    0 0 50px rgba(0, 255, 242, 0.8); /* Ombre de la boule */
+  border-radius: 50%; /* Arrondir pour faire une boule */
+  z-index: 5; /* S'assurer qu'il est au-dessus du fond */
+  animation: moveBall 2s linear infinite; /* Animation de la boule */
+  opacity: 0; /* Par défaut caché */
+}
+
+.relative.active .animate-ball {
+  opacity: 1; /* Afficher la boule lorsque le lien est actif */
+}
+
+.animate-ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(0, 255, 242, 0.8);
+  box-shadow: 0 0 10px rgba(0, 255, 242, 0.8), 0 0 20px rgba(0, 255, 242, 0.8),
+    0 0 30px rgba(0, 255, 242, 0.8), 0 0 40px rgba(0, 255, 242, 0.8),
+    0 0 50px rgba(0, 255, 242, 0.8);
+  border-radius: 50%;
+  z-index: 5;
+  animation: moveBall 2s linear infinite;
+  opacity: 0;
+}
+
+.relative.active .animate-ball {
+  opacity: 1;
+}
+
+.relative.active .animate-ball {
+  opacity: 1;
+  animation: moveBall 4s linear infinite;
 }
