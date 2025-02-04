@@ -66,7 +66,7 @@ const ProjectAnimation = () => {
   }, []);
   return (
     <div className="card-animation">
-      <section className="cards flex flex-wrap justify-center">
+      <section className=" flex flex-wrap justify-center">
         <div className="card pokemon animated"></div>
         <div className="card drinksaver animated"></div>
       </section>
