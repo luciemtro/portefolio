@@ -12,19 +12,22 @@
   0% {
     clip-path: inset(0 100% 100% 0); /* Départ en haut à gauche */
   }
-  25% {
+  20% {
     clip-path: inset(0 0 100% 0); /* Balayage vers la droite */
   }
-  50% {
+  45% {
     clip-path: inset(0 0 0 100%); /* Descente vers le bas */
   }
-  75% {
+  60% {
     clip-path: inset(100% 0 0 0); /* Balayage vers la gauche */
   }
-  100% {
+  75% {
     clip-path: inset(
-      0 98% 0 0
+      0 100% 0 0
     ); /* Remontée vers le haut (retour au point de départ) */
+  }
+  100% {
+    clip-path: inset(0 100% 100% 0); /* Départ en haut à gauche */
   }
 }
 
@@ -32,9 +35,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 3px solid rgb(183, 0, 255); /* Bordure plus visible */
-  border-radius: 8px; /* Ajout d'un arrondi pour mieux voir le glow */
-  box-shadow: 0 0 15px 5px rgb(183, 0, 255), 0 0 30px 10px rgb(183, 0, 255);
-  animation: border-glow 4s linear infinite;
+  border: 3.5px solid rgb(183, 0, 255);
+  animation: border-glow 4s linear infinite alternate-reverse;
   z-index: 2;
 }

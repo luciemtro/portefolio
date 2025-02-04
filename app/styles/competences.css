@@ -1,48 +1,45 @@
 :root {
-  --color1: rgb(0, 231, 255);
-  --color2: rgb(255, 0, 231);
+  --color1: rgb(0, 255, 221);
+  --color2: rgb(255, 0, 128);
   --back: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
-  --js1: #efb2fb;
-  --js2: #acc6f8;
-  --jsfront: url("/images/techskills/js.jpg");
-  --next1: #efb2fb;
-  --next2: #acc6f8;
-  --nextfront: url("/images/techskills/next.jpg");
-  --html1: #efb2fb;
-  --html2: #acc6f8;
-  --htmlfront: url("/images/techskills/html.jpg");
-  --css1: #efb2fb;
-  --css2: #acc6f8;
-  --cssfront: url("/images/techskills/css.jpg");
-  --sass1: #efb2fb;
-  --sass2: #acc6f8;
-  --sassfront: url("/images/techskills/sass.jpg");
-  --sql1: #efb2fb;
-  --sql2: #acc6f8;
-  --sqlfront: url("/images/techskills/sql.jpg");
-  --node1: #efb2fb;
-  --node2: #acc6f8;
-  --nodefront: url("/images/techskills/node.jpg");
-  --react1: #efb2fb;
-  --react2: #acc6f8;
-  --reactfront: url("/images/techskills/react.jpg");
-  --csharp1: #efb2fb;
-  --csharp2: #acc6f8;
-  --csharpfront: url("/images/techskills/csharp.jpg");
-  --entity1: #efb2fb;
-  --entity2: #acc6f8;
-  --entityfront: url("/images/techskills/entity.jpg");
-  --asp1: #efb2fb;
-  --asp2: #acc6f8;
-  --aspfront: url("/images/techskills/asp.jpg");
-  --ts1: #efb2fb;
-  --ts2: #acc6f8;
-  --tsfront: url("/images/techskills/ts.jpg");
-  --drinksaver1: #efb2fb;
-  --drinksaver2: #acc6f8;
+  --js1: #fbff00;
+  --js2: #00fff7;
+  --jsfront: url("/images/techskills/javascript.svg");
+  --next1: #ff0073;
+  --next2: #00fff7;
+  --nextfront: url("/images/techskills/nextjs.svg");
+  --html1: #ff6200;
+  --html2: #ff0000;
+  --htmlfront: url("/images/techskills/html.svg");
+  --css1: #00b3ff;
+  --css2: #1100ff;
+  --cssfront: url("/images/techskills/css.svg");
+  --sass1: #ff00ea;
+  --sass2: #ff0062;
+  --sassfront: url("/images/techskills/sass.svg");
+  --sql1: #4800ff;
+  --sql2: #00eaff;
+  --sqlfront: url("/images/techskills/sql.svg");
+  --node1: #7bff00;
+  --node2: #00ff80;
+  --nodefront: url("/images/techskills/nodejs.svg");
+  --react1: #00e1ff;
+  --react2: #00ff91;
+  --reactfront: url("/images/techskills/reactjs.svg");
+  --csharp1: #ea00ff;
+  --csharp2: #6a00ff;
+  --csharpfront: url("/images/techskills/csharp.svg");
+  --asp1: #bb00ff;
+  --asp2: #0400ff;
+  --aspfront: url("/images/techskills/dotnet.svg");
+  --ts1: #0400ff;
+  --ts2: #00c3ff;
+  --tsfront: url("/images/techskills/typescript.svg");
+  --drinksaver1: #ff4d00;
+  --drinksaver2: #b300ff;
   --drinksaverfront: url("/images/techskills/drinksaver.jpg");
-  --pokemon1: #efb2fb;
-  --pokemon2: #acc6f8;
+  --pokemon1: #fbff00;
+  --pokemon2: #ff0000;
   --pokemonfront: url("/images/techskills/pokemon.jpg");
 }
 
@@ -56,24 +53,17 @@
   overflow: hidden;
   z-index: 10;
   touch-action: none;
-  border-radius: 50%;
-  box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2),
-    -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent,
+  box-shadow: 0 0 5px -5px var(--color1), 0 0 5px -5px var(--color2),
+    0 0 5px -5px transparent, 0 0 5px -5px transparent,
     0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s ease, box-shadow 0.2s ease;
   will-change: transform, filter;
   background-color: #040712;
   background-image: var(--front);
-  background-size: cover;
+  background-size: 80%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transform-origin: center;
-}
-.card.drinksaver {
-  border-radius: 10%;
-}
-.card.pokemon {
-  border-radius: 10%;
 }
 
 .card:hover {
@@ -88,6 +78,10 @@
   --color2: var(--html2);
   --front: var(--htmlfront);
 }
+.card.html:after {
+  background-position: 20% 20%;
+}
+
 .card.css {
   --color1: var(--css1);
   --color2: var(--css2);
@@ -129,11 +123,6 @@
   --color2: var(--csharp2);
   --front: var(--csharpfront);
 }
-.card.entity {
-  --color1: var(--entity1);
-  --color2: var(--entity2);
-  --front: var(--entityfront);
-}
 .card.asp {
   --color1: var(--asp1);
   --color2: var(--asp2);
@@ -153,6 +142,37 @@
   --color1: var(--pokemon1);
   --color2: var(--pokemon2);
   --front: var(--pokemonfront);
+}
+.card.html:after {
+  background-position: 20% 20%;
+}
+.card.css:after {
+  background-position: 40% 40%;
+}
+.card.sass:after {
+  background-position: 60% 60%;
+}
+.card.js:after {
+  background-position: 70% 70%;
+}
+.card.react:after {
+  background-position: 30% 30%;
+}
+.card.next:after {
+  background-position: 20% 20%;
+}
+.card.sql:after {
+  background-position: 40% 40%;
+}
+.card.node:after {
+  background-position: 60% 60%;
+}
+
+.card.csharp:after {
+  background-position: 20% 20%;
+}
+.card.asp:after {
+  background-position: 40% 40%;
 }
 
 .card:before,
@@ -188,8 +208,7 @@
 
 .card:after {
   opacity: 1;
-  background-image: url("https://assets.codepen.io/13471/sparkles.gif"),
-    url(https://assets.codepen.io/13471/holo.png),
+  background-image: url("/images/glitch.gif"),
     linear-gradient(
       125deg,
       #ff008450 15%,
@@ -200,7 +219,7 @@
       #cc4cfa50 85%
     );
   background-position: 50% 50%;
-  background-size: 160%;
+  background-size: 100%;
   background-blend-mode: overlay;
   z-index: 2;
   filter: brightness(1) contrast(1);
@@ -213,6 +232,7 @@
 .card:hover:after {
   filter: brightness(1) contrast(1);
   opacity: 1;
+  background-image: none;
 }
 
 .card.active,

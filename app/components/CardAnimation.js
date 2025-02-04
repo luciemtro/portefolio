@@ -76,7 +76,6 @@ const CardAnimation = () => {
         <div className="card node animated"></div>
         <div className="card ts animated"></div>
         <div className="card csharp animated"></div>
-        <div className="card entity animated"></div>
         <div className="card asp animated"></div>
         <div className="card sql animated"></div>
       </section>
