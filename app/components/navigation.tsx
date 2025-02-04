@@ -31,7 +31,7 @@ export default function Navigation() {
       className="navigation z-20 fixed"
       aria-label="Menu de navigation principal"
     >
-      <ul className="navigation-list px-5 py-2 flex gap-6 font-basic">
+      <ul className="navigation-list px-5 py-2 flex gap-6 font-basic button--cyan">
         {[
           { id: "header", label: "Accueil" },
           { id: "about", label: "À propos" },

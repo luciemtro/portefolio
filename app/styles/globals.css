@@ -30,7 +30,7 @@ body {
   overflow-x: hidden;
   background-image: linear-gradient(
     rgb(0, 0, 0),
-    rgb(39, 32, 42),
+    rgb(21, 17, 22),
     rgb(9, 0, 14),
     rgb(1, 1, 1),
     rgb(13, 1, 20)
@@ -76,6 +76,9 @@ html {
   border-image: url(/images/button.svg) 0 20 fill;
   color: #b300ff;
   padding: 10px 30px;
+}
+.button--cyan {
+  border-image: url(/images/button-cyan.svg) 0 20 fill;
 }
 .scale {
   transition: transform 0.2s ease-in-out;
