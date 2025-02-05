@@ -53,6 +53,7 @@ html {
   font-weight: 400;
   font-size: 4rem;
 }
+
 .font-basic {
   font-family: "Genos", serif;
   font-weight: 400;
@@ -87,4 +88,24 @@ html {
 .scale:hover {
   transform: scale(1.1);
   text-shadow: 0 0 5px #b300ff, 0 0 10px #b300ff;
+}
+/* Écrans moyens */
+@media screen and (max-width: 1024px) {
+  .font-title {
+    font-size: 3rem;
+  }
+}
+
+/* Tablettes */
+@media screen and (max-width: 768px) {
+  .font-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobiles */
+@media screen and (max-width: 480px) {
+  .font-title {
+    font-size: 2rem;
+  }
 }
