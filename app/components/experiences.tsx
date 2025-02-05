@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperComponent, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
-import { Swiper as SwiperType } from "swiper";
 
 export default function Experiences() {
   // Liste des expériences avec un attribut bg pour l'image de fond
@@ -113,7 +113,10 @@ export default function Experiences() {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleSlideChange = (swiper: SwiperType) => {
+  // Calculer l'index du dernier slide
+  const lastIndex = experiences.length - 1;
+
+  const handleSlideChange = (swiper: Swiper) => {
     setActiveIndex(swiper.activeIndex);
   };
 
@@ -122,8 +125,7 @@ export default function Experiences() {
       <h2 className="font-title text-center text-2xl font-bold pb-20">
         Mon Parcours
       </h2>
-
-      <Swiper
+      <SwiperComponent
         modules={[Navigation, Pagination]}
         navigation
         pagination={{
@@ -133,6 +135,7 @@ export default function Experiences() {
         spaceBetween={50}
         slidesPerView={1}
         onSlideChange={handleSlideChange}
+        initialSlide={lastIndex} // Commencer avec le dernier slide
         className="h-[80%] w-[90%] relative"
       >
         {experiences.map((exp, index) => (
@@ -152,21 +155,19 @@ export default function Experiences() {
             >
               <div className="container-text-article-experiences bg-text-carousel p-6">
                 <img src={exp.avatar} alt="" className="w-28 h-28" />
-                <h3 className=" font-second-title title-carousel">
-                  {exp.title}
-                </h3>
+                <h3 className="font-title title-carousel">{exp.title}</h3>
                 <h4 className="font-basic">
                   {exp.entreprise}, {exp.lieu}
                 </h4>
-                {exp.date && <p className=" font-basic">{exp.date}</p>}
-                <p className=" font-basic">{exp.description}</p>
+                {exp.date && <p className="font-basic">{exp.date}</p>}
+                <p className="font-basic">{exp.description}</p>
               </div>
             </article>
           </SwiperSlide>
         ))}
         {/* Pagination */}
         <div className="swiper-pagination"></div>
-      </Swiper>
+      </SwiperComponent>
     </section>
   );
 }
