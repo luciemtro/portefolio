@@ -17,22 +17,32 @@
 }
 
 .menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 30px;
+  display: flex; /* Utiliser flexbox pour l'alignement */
+  flex-wrap: wrap; /* Permettre l'enveloppement des carrés */
+  width: 44px; /* Largeur du bouton */
+  height: 44px; /* Hauteur du bouton */
   background: transparent;
   border: none;
   cursor: pointer;
   z-index: 20;
+  padding: 5px; /* Ajouter un peu d'espace autour */
 }
 
-.bar {
-  width: 100%;
-  height: 4px;
-  background-color: #00fff2cc;
+.square {
+  width: 6px; /* Largeur des petits carrés */
+  height: 6px; /* Hauteur des petits carrés */
+  background-color: #00fff2cc; /* Couleur néon */
+  margin: 2.5px; /* Espacement entre les carrés */
   transition: all 0.3s ease;
+  box-shadow: 0 0 5px rgba(0, 255, 242, 0.8),
+    /* Ombres pour effet néon */ 0 0 10px rgba(0, 255, 242, 0.8),
+    0 0 15px rgba(0, 255, 242, 0.8);
+}
+
+/* Effet de pulsation sur hover */
+.menu-toggle:active,
+.menu-toggle:hover {
+  transform: scale(1.2); /* Augmenter la taille au survol */
 }
 
 .navigation-link.active {
@@ -47,7 +57,7 @@
     flex-direction: column;
     max-height: 0;
     overflow: hidden;
-    background-color: rgba(4, 7, 18, 0.605);
+    background-color: rgba(0, 0, 0, 0.686);
     width: 100%;
     position: absolute;
     bottom: 60px;

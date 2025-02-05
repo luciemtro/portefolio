@@ -38,9 +38,15 @@ export default function Navigation() {
     >
       <div className="flex justify-center container-button-nav">
         <button onClick={toggleMenu} className="menu-toggle">
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
+          <div className="square"></div>
         </button>
       </div>
       <ul className={`navigation-list ${isMenuOpen ? "open" : ""} `}>

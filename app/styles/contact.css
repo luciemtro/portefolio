@@ -66,8 +66,7 @@
 .glitch-form {
   display: inline-block;
   position: relative;
-  animation: color-glitch 1s infinite;
-  font-weight: bold; /* Ajout d'un poids de police pour renforcer l'effet */
+  animation: color-glitch 2.5s infinite ease-in-out;
 }
 
 .glitch-form::before,
