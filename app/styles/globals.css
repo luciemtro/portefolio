@@ -70,6 +70,11 @@ html {
   font-weight: 400;
   font-size: 1.2rem;
 }
+.font-navigation {
+  font-family: "Genos", serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
 
 .button {
   align-items: center;
@@ -115,6 +120,9 @@ html {
   .font-basic-tall {
     font-size: 1.5rem;
   }
+  .font-navigation {
+    font-size: 1.3rem;
+  }
 }
 
 /* Tablettes */
@@ -131,6 +139,9 @@ html {
   .font-basic-tall {
     font-size: 1.3rem;
   }
+  .font-navigation {
+    font-size: 1.2rem;
+  }
 }
 
 /* Mobiles */
@@ -145,6 +156,9 @@ html {
     font-size: 1.2rem;
   }
   .font-basic-tall {
+    font-size: 1.1rem;
+  }
+  .font-navigation {
     font-size: 1.1rem;
   }
 }

@@ -1,54 +1,81 @@
-.navigation-list {
-  width: fit-content;
-}
-
 .navigation {
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.686);
+  z-index: 20;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
-.navigation-link {
-  position: relative;
-  z-index: 10;
-  display: inline-block;
-  padding: 10px;
-  color: gray;
-  transition: color 0.3s;
-  font-size: 1.2rem;
+.navigation-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  transition: max-height 0.3s ease-in-out;
 }
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: #00fff2cc;
+  transition: all 0.3s ease;
+}
+
 .navigation-link.active {
   color: #00fff2cc !important;
   text-shadow: 0 0 10px rgba(0, 255, 242, 0.8), 0 0 20px rgba(0, 255, 242, 0.8),
     0 0 30px rgba(0, 255, 242, 0.8);
 }
+
+@media (max-width: 768px) {
+  .navigation-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgba(4, 7, 18, 0.605);
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+  }
+  .container-button-nav {
+    width: 100%;
+  }
+
+  .navigation-list.open {
+    max-height: 350px;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.navigation-list li:last-child {
+  padding-bottom: 18px;
+}
+
 @keyframes moveBall {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateY(-30px); /* Augmenter la distance ici */
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-30px);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateY(-30px); /* Augmenter la distance ici aussi */
+    transform: translate(-50%, -50%) rotate(360deg) translateY(-30px);
   }
-}
-
-.animate-ball {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 12px; /* Taille de la boule */
-  height: 12px; /* Taille de la boule */
-  background-color: rgba(0, 255, 242, 0.8); /* Couleur de la boule */
-  box-shadow: 0 0 10px rgba(0, 255, 242, 0.8), 0 0 20px rgba(0, 255, 242, 0.8),
-    0 0 30px rgba(0, 255, 242, 0.8), 0 0 40px rgba(0, 255, 242, 0.8),
-    0 0 50px rgba(0, 255, 242, 0.8); /* Ombre de la boule */
-  border-radius: 50%; /* Arrondir pour faire une boule */
-  z-index: 5; /* S'assurer qu'il est au-dessus du fond */
-  animation: moveBall 2s linear infinite; /* Animation de la boule */
-  opacity: 0; /* Par défaut caché */
-}
-
-.relative.active .animate-ball {
-  opacity: 1; /* Afficher la boule lorsque le lien est actif */
 }
 
 .animate-ball {
@@ -69,9 +96,4 @@
 
 .relative.active .animate-ball {
   opacity: 1;
-}
-
-.relative.active .animate-ball {
-  opacity: 1;
-  animation: moveBall 4s linear infinite;
 }

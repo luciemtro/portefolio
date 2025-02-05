@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function Navigation() {
   const [activeSection, setActiveSection] = useState<string>("");
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,12 +27,23 @@ export default function Navigation() {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav
       className="navigation z-20 fixed"
       aria-label="Menu de navigation principal"
     >
-      <ul className="navigation-list px-5 py-2 flex gap-6 font-basic button--cyan">
+      <div className="flex justify-center container-button-nav">
+        <button onClick={toggleMenu} className="menu-toggle">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+      </div>
+      <ul className={`navigation-list ${isMenuOpen ? "open" : ""} `}>
         {[
           { id: "header", label: "Accueil" },
           { id: "about", label: "À propos" },
@@ -41,10 +53,11 @@ export default function Navigation() {
           { id: "cv", label: "CV" },
           { id: "contact", label: "Contact" },
         ].map(({ id, label }) => (
-          <li key={id} className="relative">
+          <li key={id} className="relative pt-3 pl-5">
+            {" "}
             <a
               href={`#${id}`}
-              className={`navigation-link relative transition duration-300 ${
+              className={`navigation-link relative transition duration-300 font-navigation ${
                 activeSection === id ? "active" : "text-gray-400"
               }`}
             >
