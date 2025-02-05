@@ -16,6 +16,8 @@
   --foreground: #171717;
   --colorfond1: rgba(109, 53, 105, 0.5);
   --colorfond2: rgb(21, 16, 72);
+
+  --neon-green: #0ff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -50,7 +52,6 @@ html {
   font-stretch: condensed;
   font-weight: 400;
   font-size: 4rem;
-  text-shadow: 1px 1px 6px rgb(0, 0, 0);
 }
 .font-basic {
   font-family: "Genos", serif;

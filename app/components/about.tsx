@@ -1,47 +1,52 @@
+"use client";
+import { useState, useEffect } from "react";
+
 export default function About() {
+  const paragraphs = [
+    "Bonjour et bienvenue sur mon portfolio ! 👩‍💻 Actuellement en formation en développement web, je suis passionnée par la création et l’innovation numérique.",
+    "Mon domaine de prédilection est l’intégration web : transformer des maquettes en expériences interactives captivantes est un véritable plaisir. Aujourd’hui, je me prépare à intégrer le marché de l’emploi avec l’enthousiasme de mettre mes compétences en pratique et de relever des défis concrets.",
+    "Polyvalente et curieuse, j’aime explorer les technologies, du front-end au back-end. Mon objectif est de collaborer avec une équipe dynamique, partager des idées innovantes et concevoir des solutions qui ont un impact.",
+    "Si vous recherchez une développeuse motivée, enthousiaste et prête à coder avec passion, je serais ravie d’échanger avec vous ! 😊",
+  ];
+
+  const [displayedText, setDisplayedText] = useState("");
+  const [paragraphIndex, setParagraphIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    if (paragraphIndex < paragraphs.length) {
+      if (charIndex < paragraphs[paragraphIndex].length) {
+        const timeout = setTimeout(() => {
+          setDisplayedText(
+            (prev) => prev + paragraphs[paragraphIndex][charIndex]
+          );
+          setCharIndex((prev) => prev + 1);
+        }, 50); // Vitesse de frappe
+
+        return () => clearTimeout(timeout);
+      } else {
+        // Retour à la ligne et passer au paragraphe suivant après une pause
+        setTimeout(() => {
+          setDisplayedText((prev) => prev + "\n\n");
+          setParagraphIndex((prev) => prev + 1);
+          setCharIndex(0);
+        }, 500); // Pause entre paragraphes
+      }
+    }
+  }, [charIndex, paragraphIndex, paragraphs]);
+
   return (
-    <section id="about" className="about w-screen">
-      <h2 className="font-title text-center py-14 ">A propos</h2>
-      <article className="flex flex-col items-center justify-center gap-10 mx-20">
-        <header>
-          <h3 className="mb-5 font-basic">
-            Bonjour et bienvenue sur mon portfolio ! 👩‍💻
-          </h3>
-          <p className="font-basic">
-            {" "}
-            Actuellement en formation en développement web, je suis passionnée
-            par tout ce qui touche à la création et à l’innovation numérique.
-            Mon truc, c’est l’intégration web : transformer des maquettes en
-            expériences visuelles captivantes et fonctionnelles, c’est un vrai
-            plaisir !
-          </p>
-        </header>
-        <section>
-          <p className="font-basic">
-            {" "}
-            Je suis à un moment excitant de mon parcours, prête à quitter le
-            cadre académique pour plonger dans le grand bain du marché de
-            l’emploi. J’ai hâte de mettre mes compétences en pratique, de
-            relever des défis concrets et d’apprendre encore et toujours auprès
-            de personnes inspirantes.
-          </p>
-          <p className="font-basic">
-            {" "}
-            Polyvalente, curieuse et toujours partante pour découvrir de
-            nouvelles technologies, je suis ouverte à tous types de projets, que
-            ce soit en front-end, back-end ou même les deux. Ce qui m’importe
-            avant tout, c’est de collaborer avec une équipe dynamique, partager
-            des idées et créer des solutions qui font la différence.
-          </p>
-        </section>
-        <footer>
-          <p className="font-basic">
-            {" "}
-            Si tu cherches quelqu’un de motivé, enthousiaste et prêt à coder
-            avec passion, tu es au bon endroit ! 😊
-          </p>
-        </footer>
-      </article>
+    <section id="about" className="p-8 w-screen" aria-labelledby="about-title">
+      <h1 id="about-title" className="font-title  p-12 text-center">
+        À propos de moi
+      </h1>
+      <div className="relative text-neonGreen p-8 shadow-lg w-[90%] mx-auto border border-neonGreen/50 min-heignt">
+        <div className="absolute inset-0 neon-border animate-glitch"></div>
+
+        <article className="text-lg font-mono text-gray-300 leading-relaxed">
+          <p className="typing-effect">{displayedText}</p>
+        </article>
+      </div>
     </section>
   );
 }
