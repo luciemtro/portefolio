@@ -53,10 +53,22 @@ html {
   font-weight: 400;
   font-size: 4rem;
 }
+.font-second-title {
+  font-family: "Zen Dots", serif;
+  font-stretch: condensed;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+.font-basic-tall {
+  font-family: "Genos", serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
 
 .font-basic {
   font-family: "Genos", serif;
   font-weight: 400;
+  font-size: 1.2rem;
 }
 
 .button {
@@ -94,6 +106,15 @@ html {
   .font-title {
     font-size: 3rem;
   }
+  .font-basic {
+    font-size: 1.1rem;
+  }
+  .font-second-title {
+    font-size: 2rem;
+  }
+  .font-basic-tall {
+    font-size: 1.5rem;
+  }
 }
 
 /* Tablettes */
@@ -101,11 +122,29 @@ html {
   .font-title {
     font-size: 2.5rem;
   }
+  .font-basic {
+    font-size: 1rem;
+  }
+  .font-second-title {
+    font-size: 1.5rem;
+  }
+  .font-basic-tall {
+    font-size: 1.3rem;
+  }
 }
 
 /* Mobiles */
 @media screen and (max-width: 480px) {
   .font-title {
     font-size: 2rem;
+  }
+  .font-basic {
+    font-size: 0.9rem;
+  }
+  .font-second-title {
+    font-size: 1.2rem;
+  }
+  .font-basic-tall {
+    font-size: 1.1rem;
   }
 }

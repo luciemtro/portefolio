@@ -84,7 +84,7 @@ export default function Header() {
         >
           <div className="container-text-header absolute">
             <h1 className="header-title font-title">Bienvenue !</h1>
-            <h2 className="header-subtitle font-basic text-3xl">
+            <h2 className="header-subtitle font-basic-tall text-3xl">
               Je m&apos;appelle Lucie, Développeuse Web
             </h2>
             <p className="font-basic text-2xl pt-2 pb-4 header-p">

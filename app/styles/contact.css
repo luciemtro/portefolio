@@ -18,3 +18,69 @@
     width: 95%;
   }
 }
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: 1px 1px 0 #b300ff, -1px -1px 0 #b300ff;
+  }
+  20% {
+    transform: translate(-1px, -1px);
+    text-shadow: 1px 1px 0 #b300ff, -1px -1px 0 #b300ff;
+  }
+  40% {
+    transform: translate(1px, 1px);
+    text-shadow: 1px 1px 0 #b300ff, -1px -1px 0 #b300ff;
+  }
+  60% {
+    transform: translate(-1px, -1px);
+    text-shadow: 1px 1px 0 #b300ff, -1px -1px 0 #b300ff;
+  }
+  80% {
+    transform: translate(1px, 1px);
+    text-shadow: 1px 1px 0 #b300ff, -1px -1px 0 #b300ff;
+  }
+  100% {
+    transform: translate(0);
+    text-shadow: 1px 1px 0 #b300ff, -1px -1px 0 #b300ff;
+  }
+}
+
+@keyframes color-glitch {
+  0% {
+    color: black;
+  }
+  25% {
+    color: #b300ff; /* Violet */
+  }
+  50% {
+    color: black;
+  }
+  75% {
+    color: #b300ff; /* Violet */
+  }
+  100% {
+    color: black;
+  }
+}
+
+.glitch-form {
+  display: inline-block;
+  position: relative;
+  animation: color-glitch 1s infinite;
+  font-weight: bold; /* Ajout d'un poids de police pour renforcer l'effet */
+}
+
+.glitch-form::before,
+.glitch-form::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(179, 0, 255, 0.6); /* Couleur semi-transparente */
+  clip-path: inset(0 0 0 0);
+}
+
+.glitch-form::after {
+  left: 1px; /* Déplacement léger pour créer un effet */
+  text-shadow: -1px 0 #b300ff; /* Ombre pour renforcer l'effet */
+}

@@ -65,8 +65,8 @@ const CardAnimation = () => {
     };
   }, []);
   return (
-    <div className="card-animation p-10">
-      <div className="cards flex flex-wrap justify-center mb-20">
+    <div className="card-animation">
+      <div className="cards flex justify-center mb-20">
         <div className="card html animated"></div>
         <div className="card css animated"></div>
         <div className="card sass animated"></div>

@@ -68,6 +68,27 @@
   background-position: 50% 50%;
   transform-origin: center;
 }
+/* Écrans moyens */
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* Tablettes */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 130px;
+    height: 130px;
+  }
+}
+/* Mobiles */
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+}
 
 .card:hover {
   box-shadow: -20px -20px 30px -25px var(--color1),
@@ -376,13 +397,14 @@
 
 .cards {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   perspective: 2000px;
   position: relative;
   z-index: 1;
   transform: translate3d(0.1px, 0.1px, 0.1px);
+  padding: 30px;
 }
 
 @media screen and (min-width: 600px) {

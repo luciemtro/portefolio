@@ -73,7 +73,7 @@ export default function About() {
         <div className="absolute inset-0 neon-border animate-glitch"></div>
 
         <article className="text-lg font-mono text-gray-300 leading-relaxed">
-          <p className="typing-effect">{displayedText}</p>
+          <p className="typing-effect font-basic">{displayedText}</p>
         </article>
       </div>
     </section>

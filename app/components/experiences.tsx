@@ -152,7 +152,9 @@ export default function Experiences() {
             >
               <div className="container-text-article-experiences bg-text-carousel p-6">
                 <img src={exp.avatar} alt="" className="w-28 h-28" />
-                <h3 className=" font-title title-carousel">{exp.title}</h3>
+                <h3 className=" font-second-title title-carousel">
+                  {exp.title}
+                </h3>
                 <h4 className="font-basic">
                   {exp.entreprise}, {exp.lieu}
                 </h4>
