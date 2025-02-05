@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export default function About() {
   const paragraphs = [
@@ -12,20 +12,44 @@ export default function About() {
   const [displayedText, setDisplayedText] = useState("");
   const [paragraphIndex, setParagraphIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const sectionRef = useRef(null);
 
+  // Observe pour détecter si la section est visible
   useEffect(() => {
-    if (paragraphIndex < paragraphs.length) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.5 } // Déclenche l'animation quand 50% de la section est visible
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasStarted]);
+
+  // Lance l'animation seulement si elle a été déclenchée
+  useEffect(() => {
+    if (hasStarted && paragraphIndex < paragraphs.length) {
       if (charIndex < paragraphs[paragraphIndex].length) {
         const timeout = setTimeout(() => {
           setDisplayedText(
             (prev) => prev + paragraphs[paragraphIndex][charIndex]
           );
           setCharIndex((prev) => prev + 1);
-        }, 50); // Vitesse de frappe
+        }, 30); // Vitesse de frappe
 
         return () => clearTimeout(timeout);
       } else {
-        // Retour à la ligne et passer au paragraphe suivant après une pause
         setTimeout(() => {
           setDisplayedText((prev) => prev + "\n\n");
           setParagraphIndex((prev) => prev + 1);
@@ -33,14 +57,19 @@ export default function About() {
         }, 500); // Pause entre paragraphes
       }
     }
-  }, [charIndex, paragraphIndex, paragraphs]);
+  }, [charIndex, paragraphIndex, paragraphs, hasStarted]);
 
   return (
-    <section id="about" className="p-8 w-screen" aria-labelledby="about-title">
-      <h1 id="about-title" className="font-title  p-12 text-center">
+    <section
+      id="about"
+      ref={sectionRef}
+      className="p-8 w-screen"
+      aria-labelledby="about-title"
+    >
+      <h1 id="about-title" className="font-title p-12 text-center">
         À propos de moi
       </h1>
-      <div className="relative text-neonGreen p-8 shadow-lg w-[90%] mx-auto border border-neonGreen/50 min-heignt">
+      <div className="relative text-neonGreen p-8 shadow-lg w-[90%] mx-auto border border-neonGreen/50">
         <div className="absolute inset-0 neon-border animate-glitch"></div>
 
         <article className="text-lg font-mono text-gray-300 leading-relaxed">
