@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 export default function Navigation() {
-  const [activeSection, setActiveSection] = useState<string>("");
+  const [activeSection, setActiveSection] = useState<string>("header");
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function Navigation() {
       className="navigation z-20 fixed"
       aria-label="Menu de navigation principal"
     >
-      <div className="flex justify-center container-button-nav">
+      <div className="justify-center container-button-nav">
         <button onClick={toggleMenu} className="menu-toggle">
           <div className="square"></div>
           <div className="square"></div>

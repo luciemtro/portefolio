@@ -15,34 +15,30 @@
   justify-content: space-around;
   transition: max-height 0.3s ease-in-out;
 }
-
+.container-button-nav {
+  display: none;
+}
 .menu-toggle {
-  display: flex; /* Utiliser flexbox pour l'alignement */
-  flex-wrap: wrap; /* Permettre l'enveloppement des carrés */
-  width: 44px; /* Largeur du bouton */
-  height: 44px; /* Hauteur du bouton */
+  display: flex;
+  flex-wrap: wrap;
+  width: 44px;
+  height: 44px;
   background: transparent;
   border: none;
   cursor: pointer;
   z-index: 20;
-  padding: 5px; /* Ajouter un peu d'espace autour */
+  padding: 5px;
 }
 
 .square {
-  width: 6px; /* Largeur des petits carrés */
-  height: 6px; /* Hauteur des petits carrés */
-  background-color: #00fff2cc; /* Couleur néon */
-  margin: 2.5px; /* Espacement entre les carrés */
+  width: 6px;
+  height: 6px;
+  background-color: #00fff2cc;
+  margin: 2.5px;
   transition: all 0.3s ease;
   box-shadow: 0 0 5px rgba(0, 255, 242, 0.8),
     /* Ombres pour effet néon */ 0 0 10px rgba(0, 255, 242, 0.8),
     0 0 15px rgba(0, 255, 242, 0.8);
-}
-
-/* Effet de pulsation sur hover */
-.menu-toggle:active,
-.menu-toggle:hover {
-  transform: scale(1.2); /* Augmenter la taille au survol */
 }
 
 .navigation-link.active {
@@ -64,6 +60,7 @@
   }
   .container-button-nav {
     width: 100%;
+    display: flex;
   }
 
   .navigation-list.open {
