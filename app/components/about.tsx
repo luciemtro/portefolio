@@ -23,7 +23,7 @@ export default function About() {
           setHasStarted(true);
         }
       },
-      { threshold: 0.5 } // Déclenche l'animation quand 50% de la section est visible
+      { threshold: 0.5 }
     );
 
     if (sectionRef.current) {
@@ -46,7 +46,7 @@ export default function About() {
             (prev) => prev + paragraphs[paragraphIndex][charIndex]
           );
           setCharIndex((prev) => prev + 1);
-        }, 30); // Vitesse de frappe
+        }, 30);
 
         return () => clearTimeout(timeout);
       } else {
@@ -54,7 +54,7 @@ export default function About() {
           setDisplayedText((prev) => prev + "\n\n");
           setParagraphIndex((prev) => prev + 1);
           setCharIndex(0);
-        }, 500); // Pause entre paragraphes
+        }, 500);
       }
     }
   }, [charIndex, paragraphIndex, paragraphs, hasStarted]);
@@ -69,9 +69,9 @@ export default function About() {
       <h1 id="about-title" className="font-title p-12 text-center">
         À propos de moi
       </h1>
-      <div className="relative text-neonGreen p-8 shadow-lg w-[90%] mx-auto border border-neonGreen/50">
-        <div className="absolute inset-0 neon-border animate-glitch"></div>
 
+      <div className="relative text-neonGreen p-8 shadow-lg w-[90%] mx-auto border border-neonGreen/50 container-text-container-about">
+        <div className="absolute inset-0 neon-border animate-glitch"></div>
         <article className="text-lg font-mono text-gray-300 leading-relaxed">
           <p className="typing-effect font-basic">{displayedText}</p>
         </article>
