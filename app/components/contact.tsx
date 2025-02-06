@@ -52,7 +52,7 @@ export default function Contact() {
       id="contact"
       className="contact min-h-screen w-screen flex flex-col items-center"
     >
-      <h2 className="font-title text-center mb-10">Mon contact</h2>
+      <h2 className="font-title text-center p-10">Mon contact</h2>
       <form
         onSubmit={handleSubmit}
         className="contact-form flex flex-col gap-5"
