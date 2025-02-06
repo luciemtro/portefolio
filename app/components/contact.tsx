@@ -55,7 +55,7 @@ export default function Contact() {
       <h2 className="font-title text-center mb-10">Mon contact</h2>
       <form
         onSubmit={handleSubmit}
-        className="contact-form flex flex-col gap-5 m-10"
+        className="contact-form flex flex-col gap-5"
       >
         <div className=" flex flex-col gap-2">
           <label htmlFor="name" className="glitch-form font-basic">
