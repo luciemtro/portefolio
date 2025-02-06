@@ -2,7 +2,9 @@
   --colorone: rgba(178, 249, 252, 0.751);
   --colortwo: rgba(172, 71, 255, 0.848);
 }
-
+#header {
+  pointer-events: none;
+}
 /* Common styles for card-header and card-header2 */
 .card-header,
 .card-header2,

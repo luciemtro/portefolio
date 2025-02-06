@@ -1,5 +1,6 @@
 #contact {
   padding-bottom: 150px;
+  overflow: hidden;
 }
 .contact-form {
   width: 70%;
@@ -9,9 +10,10 @@
   outline: none;
   padding: 10px;
 }
+/* Pour mettre en évidence l'input en cours de saisie */
 .champs:focus {
-  border: 3px solid #b300ff;
-  box-shadow: 0 0 5px #b300ff, 0 0 10px #b300ff;
+  border: 3px solid var(--neon-violet);
+  box-shadow: 0 0 5px var(--neon-violet), 0 0 10px var(--neon-violet);
 }
 @media screen and (max-width: 768px) {
   .contact-form {
@@ -44,19 +46,19 @@
     text-shadow: 1px 1px 0 #b300ff, -1px -1px 0 #b300ff;
   }
 }
-
+/* Clignotement des labels du formulaire de contact */
 @keyframes color-glitch {
   0% {
     color: black;
   }
   25% {
-    color: #b300ff; /* Violet */
+    color: var(--neon-violet);
   }
   50% {
     color: black;
   }
   75% {
-    color: #b300ff; /* Violet */
+    color: var(--neon-violet);
   }
   100% {
     color: black;
@@ -66,7 +68,7 @@
 .glitch-form {
   display: inline-block;
   position: relative;
-  animation: color-glitch 2.5s infinite ease-in-out;
+  animation: color-glitch 3s infinite ease-in-out;
 }
 
 .glitch-form::before,
@@ -75,11 +77,11 @@
   position: absolute;
   left: 0;
   top: 0;
-  color: rgba(179, 0, 255, 0.6); /* Couleur semi-transparente */
+  color: rgba(179, 0, 255, 0.6);
   clip-path: inset(0 0 0 0);
 }
 
 .glitch-form::after {
-  left: 1px; /* Déplacement léger pour créer un effet */
-  text-shadow: -1px 0 #b300ff; /* Ombre pour renforcer l'effet */
+  left: 1px;
+  text-shadow: -1px 0 var(--neon-violet);
 }

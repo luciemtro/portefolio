@@ -33,7 +33,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className="navigation z-20 fixed"
+      className="navigation z-20 fixed "
       aria-label="Menu de navigation principal"
     >
       <div className="justify-center container-button-nav">
@@ -49,7 +49,7 @@ export default function Navigation() {
           <div className="square"></div>
         </button>
       </div>
-      <ul className={`navigation-list ${isMenuOpen ? "open" : ""} `}>
+      <ul className={`navigation-list ${isMenuOpen ? "open" : ""}  `}>
         {[
           { id: "header", label: "Accueil" },
           { id: "about", label: "À propos" },

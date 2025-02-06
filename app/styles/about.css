@@ -1,21 +1,22 @@
 /* Effet néon */
 .neon-glow {
-  text-shadow: 0 0 5px var(--neon-green), 0 0 9px var(--neon-green);
+  text-shadow: 0 0 5px var(--neon-violet), 0 0 9px var(--neon-violet);
 }
 
 /* Bordure et glitch */
 .neon-border {
-  border: 2px solid rgba(0, 255, 255, 0.5);
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-  position: absolute; /* Positionnez l'élément de glitch correctement */
+  border: 2px solid var(--neon-violet);
+  box-shadow: 0 0 10px var(--neon-violet);
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; /* Étendez à toutes les dimensions */
-  pointer-events: none; /* Permet aux clics de passer à travers */
-  z-index: 0; /* Mettez-le derrière le texte */
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
 }
 
+/* Glitch */
 .animate-glitch {
   animation: glitch 1.5s infinite alternate;
 }
@@ -47,13 +48,13 @@
     transform: translate(0);
   }
 }
-
+/* Typing effect */
 .typing-effect {
   display: block;
-  white-space: pre-wrap; /* Retours à la ligne automatiques */
+  white-space: pre-wrap;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  border-right: 2px solid var(--neon-green);
+  border-right: 2px solid var(--neon-violet);
   animation: blink-caret 0.75s step-end infinite;
 }
 

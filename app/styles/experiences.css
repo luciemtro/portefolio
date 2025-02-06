@@ -56,8 +56,8 @@
   background: transparent;
   border: 2px solid rgba(0, 157, 255, 0.4); /* Bordure néon */
   transform: rotate(45deg); /* Rotation pour un effet diamant */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
-    background 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
   cursor: pointer;
   position: relative;
   border-radius: 0% !important;

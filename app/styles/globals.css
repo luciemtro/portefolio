@@ -5,19 +5,15 @@
 @import "competences.css";
 @import "experiences.css";
 @import "contact.css";
-@import "projects.css";
-@import "cv.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
   --colorfond1: rgba(109, 53, 105, 0.5);
   --colorfond2: rgb(21, 16, 72);
-
-  --neon-green: #0ff;
+  --neon-violet: #b300ff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -91,14 +87,12 @@ html {
   -webkit-user-select: none;
   user-select: none;
 }
-.button--black {
+.puce--violet {
   border-image: url(/images/button.svg) 0 20 fill;
   color: #b300ff;
   padding: 10px 30px;
 }
-.button--cyan {
-  border-image: url(/images/button-cyan.svg) 0 20 fill;
-}
+
 .scale {
   transition: transform 0.2s ease-in-out;
 }
@@ -106,6 +100,7 @@ html {
   transform: scale(1.1);
   text-shadow: 0 0 5px #b300ff, 0 0 10px #b300ff;
 }
+
 /* Écrans moyens */
 @media screen and (max-width: 1024px) {
   .font-title {

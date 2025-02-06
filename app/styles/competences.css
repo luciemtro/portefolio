@@ -1,3 +1,4 @@
+/* Couleurs pour chaque cards */
 :root {
   --color1: rgb(0, 255, 221);
   --color2: rgb(255, 0, 128);
@@ -96,7 +97,7 @@
     7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3),
     0 55px 35px -20px rgba(0, 0, 0, 0.5);
 }
-
+/* Transmission couleur et image à chaque card */
 .card.html {
   --color1: var(--html1);
   --color2: var(--html2);
@@ -168,6 +169,7 @@
   --color2: var(--pokemon2);
   --front: var(--pokemonfront);
 }
+/* Changement de position du Gif sur les cards pour pas dupliquer le même rendu */
 .card.html:after {
   background-position: 20% 20%;
 }

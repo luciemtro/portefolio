@@ -50,7 +50,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="contact min-h-screen w-screen flex flex-col items-center"
+      className="contact min-h-screen w-screen flex flex-col items-center p-5"
     >
       <h2 className="font-title text-center mb-10">Mon contact</h2>
       <form
@@ -99,7 +99,7 @@ export default function Contact() {
         </div>
         <button
           type="submit"
-          className="font-basic button button--black scale uppercase"
+          className="font-basic button puce--violet scale uppercase"
         >
           Envoyer
         </button>
