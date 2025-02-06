@@ -153,13 +153,18 @@ export default function Experiences() {
                 opacity: activeIndex === index ? 1 : 0.7,
               }}
             >
-              <div className="container-text-article-experiences bg-text-carousel p-6">
-                <img src={exp.avatar} alt="" className="w-28 h-28" />
-                <h3 className="font-title title-carousel">{exp.title}</h3>
-                <h4 className="font-basic">
-                  {exp.entreprise}, {exp.lieu}
-                </h4>
-                {exp.date && <p className="font-basic">{exp.date}</p>}
+              <div className="container-text-article-experiences bg-text-carousel">
+                <div className="flex items-center pb-3">
+                  <img src={exp.avatar} alt="" className="image-carousel" />
+                  <div className="ml-4">
+                    <h3 className="font-title title-carousel">{exp.title}</h3>
+                    <h4 className="font-basic">
+                      {exp.entreprise}, {exp.lieu}
+                    </h4>
+                    {exp.date && <p className="font-basic">{exp.date}</p>}
+                  </div>
+                </div>
+
                 <p className="font-basic">{exp.description}</p>
               </div>
             </article>
