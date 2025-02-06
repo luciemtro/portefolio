@@ -140,3 +140,10 @@
 .swiper-button-next::after {
   content: "→";
 }
+
+@media screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
