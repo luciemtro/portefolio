@@ -102,3 +102,9 @@
   background-position: 50% 50%;
   background-size: 100%;
 }
+
+@media screen and (max-width: 768px) {
+  #header {
+    height: 90vh;
+  }
+}
