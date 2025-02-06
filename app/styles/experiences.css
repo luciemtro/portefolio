@@ -72,13 +72,13 @@
   gap: 15px; /* Espacement entre les bullets */
 }
 
-/* 💜 Bullets en diamant */
+/* Bullets en square*/
 .swiper-pagination-bullet {
   width: 14px !important;
   height: 14px !important;
   background: transparent;
-  border: 2px solid rgba(0, 157, 255, 0.4); /* Bordure néon */
-  transform: rotate(45deg); /* Rotation pour un effet diamant */
+  border: 2px solid rgba(0, 0, 0, 0.877);
+  transform: rotate(45deg);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
   cursor: pointer;
@@ -93,7 +93,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0, 157, 255, 0.4) !important; /* Couleur néon */
+  background: rgba(0, 13, 20, 0.4) !important;
   filter: blur(6px);
   top: 0;
   left: 0;
@@ -104,9 +104,9 @@
 
 /* 🚀 Animation du bullet actif */
 .swiper-pagination-bullet-active {
-  background: #00ffdd !important; /* Couleur néon */
+  background: #00ffdd !important;
   border-color: #00ffdd;
-  transform: scale(1.6) rotate(45deg); /* Zoom + rotation */
+  transform: scale(1.6) rotate(45deg);
   box-shadow: 0 0 15px #00ffdd, 0 0 30px #00ffdd, 0 0 45px #00ffdd;
 }
 
@@ -156,7 +156,7 @@
 
 /* Flèche gauche (prev) */
 .swiper-button-prev::after {
-  content: "←"; /* Flèche gauche */
+  content: "←";
 }
 
 /* Flèche droite (next) */
