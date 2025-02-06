@@ -73,29 +73,16 @@
   z-index: 1;
 }
 
-/* Animation for text */
-.header-title,
-.header-subtitle,
-.header-p,
 .container-text-header {
-  animation: translateX 1.5s forwards;
-  text-shadow: 0 0 10px 10px rgb(0, 0, 0);
-}
-
-.header-subtitle {
-  animation-duration: 1.8s;
-}
-
-.header-p {
-  animation-duration: 2s;
-}
-
-.container-text-header {
-  transform: translateX(200%);
-  animation-delay: 0.5s;
   padding: 3rem;
   top: 35%;
   left: 3%;
+}
+.typing-effect-header {
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Animation for transitions */
