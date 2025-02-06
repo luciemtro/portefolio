@@ -2,17 +2,26 @@
   --colorone: rgba(178, 249, 252, 0.751);
   --colortwo: rgba(172, 71, 255, 0.848);
 }
-#header {
-  pointer-events: none;
-}
-/* Common styles for card-header and card-header2 */
+#header,
 .card-header,
 .card-header2,
 .card-header3 {
   position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card-header,
+.card-header2,
+.card-header3 {
   z-index: 10;
-  touch-action: none;
-  will-change: transform, filter;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-header {
   background-image: linear-gradient(
       95deg,
       rgb(7, 0, 10),
@@ -20,13 +29,10 @@
       rgb(7, 0, 10)
     ),
     url("/images/header.webp");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 
-.card-header2,
-.card-header3 {
+/* Répéter pour les autres images d'en-tête */
+.card-header2 {
   background-image: linear-gradient(
       95deg,
       rgb(7, 0, 10),
@@ -34,8 +40,8 @@
       rgb(7, 0, 10)
     ),
     url("/images/header2.webp");
-  transform: saturate(5) contrast(3);
 }
+
 .card-header3 {
   background-image: linear-gradient(
       95deg,
@@ -44,9 +50,7 @@
       rgb(7, 0, 10)
     ),
     url("/images/header3.webp");
-  transform: saturate(3) contrast(1.2);
 }
-
 /* Before and after pseudo-elements */
 .card-header:before,
 .card-header2:before,
@@ -96,14 +100,4 @@
   );
   background-position: 50% 50%;
   background-size: 100%;
-}
-
-/* Keyframes for animations */
-@keyframes translateX {
-  0% {
-    transform: translateX(200%);
-  }
-  100% {
-    transform: translateX(0);
-  }
 }

@@ -150,24 +150,17 @@ export default function Header() {
       : "";
 
   return (
-    <section
-      id="header"
-      ref={sectionRef}
-      className="h-screen w-screen"
-      aria-label="Section d'accueil"
-    >
-      <article className="min-h-screen w-screen">
+    <section id="header" ref={sectionRef} aria-label="Section d'accueil">
+      <article>
         <header
-          className={`relative h-screen w-screen transition-all ${currentClassName} ${
+          className={`relative transition-all ${currentClassName} ${
             isGlitching ? "active" : ""
           }`}
         >
           <div className="container-text-header absolute">
-            <h1 className="header-title font-title">{typedTextH1}</h1>
-            <h2 className="header-subtitle font-basic-tall text-3xl">
-              {typedTextH2}
-            </h2>
-            <p className="font-basic text-2xl header-p">{typedTextP}</p>
+            <h1 className="font-title">{typedTextH1}</h1>
+            <h2 className="font-basic-tall">{typedTextH2}</h2>
+            <p className="font-basic">{typedTextP}</p>
           </div>
         </header>
       </article>
