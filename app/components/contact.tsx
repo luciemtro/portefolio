@@ -50,7 +50,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="contact min-h-screen w-screen flex flex-col items-center p-5"
+      className="contact min-h-screen w-screen flex flex-col items-center"
     >
       <h2 className="font-title text-center mb-10">Mon contact</h2>
       <form

@@ -167,9 +167,7 @@ export default function Header() {
             <h2 className="header-subtitle font-basic-tall text-3xl typing-effect">
               {typedTextH2}
             </h2>
-            <p className="font-basic text-2xl pt-2 pb-4 header-p">
-              {typedTextP}
-            </p>
+            <p className="font-basic text-2xl header-p">{typedTextP}</p>
           </div>
         </header>
       </article>
