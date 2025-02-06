@@ -66,7 +66,7 @@ export default function About() {
       className="p-8 w-screen"
       aria-labelledby="about-title"
     >
-      <h1 id="about-title" className="font-title p-12 text-center">
+      <h1 id="about-title" className="font-title py-10 text-center">
         À propos de moi
       </h1>
 

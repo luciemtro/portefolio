@@ -122,7 +122,7 @@ export default function Experiences() {
 
   return (
     <section id="experiences" className="h-screen w-screen">
-      <h2 className="font-title text-center text-2xl font-bold p-10">
+      <h2 className="font-title text-center text-2xl font-bold py-10">
         Mon Parcours
       </h2>
       <SwiperComponent

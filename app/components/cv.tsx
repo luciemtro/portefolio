@@ -4,7 +4,7 @@ export default function Cv() {
       id="cv"
       className="cv h-screen w-screen flex flex-col p-4 items-center gap-32"
     >
-      <h2 className="font-title text-2xl text-center p-10">
+      <h2 className="font-title text-2xl text-center py-10">
         Mon Curriculum Vitae
       </h2>
       <div className="flex items-center justify-center">
