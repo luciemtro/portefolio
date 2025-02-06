@@ -4,9 +4,9 @@ export default function Competences() {
   return (
     <section
       id="competences"
-      className="competences min-h-screen w-screen relative py-10"
+      className="competences min-h-screen w-screen relative "
     >
-      <h2 className="font-title text-center">Mes TechSkills</h2>
+      <h2 className="font-title text-center py-12 px-5">Mes TechSkills</h2>
 
       <CardAnimation />
     </section>

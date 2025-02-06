@@ -2,7 +2,7 @@ import ProjectAnimation from "@/app/components/ProjectAnimation"; // Ajustez le 
 
 export default function Projects() {
   return (
-    <section id="projects" className="projects min-h-screen w-screen">
+    <section id="projects" className="projects min-h-screen w-screen p-5">
       <h2 className="font-title text-center py-10">Mes projets</h2>
       <ProjectAnimation />
     </section>
