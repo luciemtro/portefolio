@@ -80,6 +80,7 @@
 .container-text-header {
   top: 35%;
   left: 5%;
+  width: 90%;
 }
 .typing-effect-header {
   display: inline-block;
