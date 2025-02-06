@@ -134,9 +134,6 @@ html {
   .font-basic-tall {
     font-size: 1.3rem;
   }
-  .font-navigation {
-    font-size: 1.2rem;
-  }
 }
 
 /* Mobiles */
@@ -151,9 +148,6 @@ html {
     font-size: 1.2rem;
   }
   .font-basic-tall {
-    font-size: 1.1rem;
-  }
-  .font-navigation {
     font-size: 1.1rem;
   }
 }
