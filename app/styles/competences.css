@@ -36,11 +36,11 @@
   --ts1: #0400ff;
   --ts2: #00c3ff;
   --tsfront: url("/images/techskills/typescript.svg");
-  --drinksaver1: #ff4d00;
-  --drinksaver2: #b300ff;
+  --drinksaver1: #d33500;
+  --drinksaver2: #3a0053;
   --drinksaverfront: url("/images/techskills/drinksaver.jpg");
-  --pokemon1: #000dff;
-  --pokemon2: #e7e700;
+  --pokemon1: #000ace;
+  --pokemon2: #999900;
   --pokemonfront: url("/images/techskills/pokemon.svg");
 }
 #competences {
@@ -163,11 +163,27 @@
   --color2: var(--drinksaver2);
   --front: var(--drinksaverfront);
   background-size: cover !important;
+  width: 250px !important;
+  height: 250px !important;
 }
 .card.pokemon {
   --color1: var(--pokemon1);
   --color2: var(--pokemon2);
   --front: var(--pokemonfront);
+  width: 250px !important;
+  height: 250px !important;
+}
+.container-title-project {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: rgba(1, 2, 16, 0.827);
+}
+.title-project {
+  font-family: "Zen Dots", serif;
+  font-stretch: condensed;
 }
 /* Changement de position du Gif sur les cards pour pas dupliquer le même rendu */
 .card.html:after {
