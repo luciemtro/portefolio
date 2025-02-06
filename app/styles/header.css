@@ -78,10 +78,9 @@
   left: 5%;
 }
 .typing-effect-header {
-  display: block;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /* Animation for transitions */

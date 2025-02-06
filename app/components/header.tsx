@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useMemo } from "react";
 
 // Hook pour précharger les images
 const usePreloadImages = (imageList: string[]) => {
@@ -47,28 +47,28 @@ export default function Header() {
   // Utilisation du hook pour précharger les images
   usePreloadImages(images);
 
-  // Durées d'affichage des images
-  const displayDurations = [3000, 500, 4000, 500]; // Durée en millisecondes pour chaque image
+  const displayDurations = useMemo(() => [3000, 500, 4000, 500], []);
 
-  // Observer pour détecter si le header est visible
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting && !hasStartedRef.current) {
           hasStartedRef.current = true;
-          startTypingEffect(); // Commencer l'effet de typage
+          startTypingEffect();
         }
       },
       { threshold: 0.5 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const currentSectionRef = sectionRef.current;
+
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
       }
     };
   }, []);
@@ -129,10 +129,10 @@ export default function Header() {
       setTimeout(() => {
         setIsGlitching(false);
         setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-      }, 300); // Durée de l'effet de glitch
+      }, 300);
     };
 
-    const timeout = setTimeout(glitchEffect, displayDurations[imageIndex]); // Changer d'image avec la durée appropriée
+    const timeout = setTimeout(glitchEffect, displayDurations[imageIndex]);
 
     return () => clearTimeout(timeout);
   }, [imageIndex, images.length, displayDurations]);
@@ -164,7 +164,7 @@ export default function Header() {
         >
           <div className="container-text-header absolute">
             <h1 className="header-title font-title">{typedTextH1}</h1>
-            <h2 className="header-subtitle font-basic-tall text-3xl typing-effect">
+            <h2 className="header-subtitle font-basic-tall text-3xl">
               {typedTextH2}
             </h2>
             <p className="font-basic text-2xl header-p">{typedTextP}</p>
