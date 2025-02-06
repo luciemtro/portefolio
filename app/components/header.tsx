@@ -158,9 +158,9 @@ export default function Header() {
           }`}
         >
           <div className="container-text-header absolute">
-            <h1 className="font-title">{typedTextH1}</h1>
-            <h2 className="font-basic-tall">{typedTextH2}</h2>
-            <p className="font-basic">{typedTextP}</p>
+            <h1 className="font-title text-shadow">{typedTextH1}</h1>
+            <h2 className="font-basic-tall text-shadow">{typedTextH2}</h2>
+            <p className="font-basic text-shadow">{typedTextP}</p>
           </div>
         </header>
       </article>
