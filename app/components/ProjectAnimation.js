@@ -70,7 +70,7 @@ const ProjectAnimation = () => {
         <a href="https://pokemon-green-gamma.vercel.app">
           <div className="card pokemon animated">
             <div className="flex justify-center items-center p-2 container-title-project">
-              <h3 className="title-project">Pokemon</h3>
+              <h3 className="title-project">Pokemon Store</h3>
             </div>
           </div>
         </a>
