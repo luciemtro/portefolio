@@ -26,6 +26,7 @@
   height: 400px;
   padding-right: 16px;
   box-sizing: border-box;
+  background-color: black;
 }
 
 @keyframes glitch {
