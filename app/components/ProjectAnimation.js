@@ -66,7 +66,7 @@ const ProjectAnimation = () => {
   }, []);
   return (
     <div className="card-animation">
-      <section className=" flex flex-wrap justify-center">
+      <div className=" flex flex-wrap justify-center">
         <a href="https://pokemon-green-gamma.vercel.app">
           <div className="card pokemon animated">
             <div className="flex justify-center items-center p-2 container-title-project">
@@ -79,7 +79,7 @@ const ProjectAnimation = () => {
             <h3 className="title-project">Drink Saver</h3>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
