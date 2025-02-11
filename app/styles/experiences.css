@@ -122,43 +122,27 @@
     transform: translateX(2px) translateY(-2px);
   }
 }
-
+.swiper-button-prev {
+  background-image: url("/images/arrow-left.svg");
+}
+.swiper-button-next {
+  background-image: url("/images/arrow-right.svg");
+}
 /* Style de base des flèches */
 .swiper-button-prev,
 .swiper-button-next {
-  color: rgba(0, 157, 255, 0.4) !important;
-  text-shadow: 0 0 15px #00ffdd, 0 0 30px rgba(0, 157, 255, 0.4);
+  color: #00ffdd00 !important;
   transition: all 0.3s ease-in-out;
   width: 50px;
   height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  background-size: cover;
 }
 
 /* Effet hover */
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  color: #00ffdd !important;
-  text-shadow: 0 0 25px #00ffdd, 0 0 50px rgba(0, 157, 255, 0.4);
   transform: scale(1.2);
-}
-
-/* Icônes des flèches */
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 30px !important;
-  font-weight: bold;
-}
-
-/* Flèche gauche (prev) */
-.swiper-button-prev::after {
-  content: "←";
-}
-
-/* Flèche droite (next) */
-.swiper-button-next::after {
-  content: "→";
 }
 
 @media screen and (max-width: 768px) {
