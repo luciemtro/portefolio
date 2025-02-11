@@ -34,7 +34,9 @@ body {
     rgb(8, 8, 8),
     rgb(24, 17, 27)
   );
+  background-repeat: repeat;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
