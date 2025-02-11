@@ -65,8 +65,9 @@ export default function Contact() {
             type="text"
             name="name"
             value={formData.name}
-            className="border-[#b300ff] border-2 h-10 font-basic bg-transparent champs"
+            className=" h-10 font-basic champs"
             onChange={handleChange}
+            placeholder="Votre nom"
             required
           />
         </div>
@@ -78,8 +79,9 @@ export default function Contact() {
             type="email"
             name="email"
             value={formData.email}
-            className="border-[#b300ff] border-2 h-10 font-basic bg-transparent champs"
+            className=" h-10 font-basic champs"
             onChange={handleChange}
+            placeholder="Votre email"
             required
           />
         </div>
@@ -91,9 +93,10 @@ export default function Contact() {
             rows={10}
             name="message"
             value={formData.message}
-            className="border-[#b300ff] border-2 bg-transparent champs"
+            className=" champs"
             style={{ resize: "none" }}
             onChange={handleChange}
+            placeholder="Votre message"
             required
           />
         </div>

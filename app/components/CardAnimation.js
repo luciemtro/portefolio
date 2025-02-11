@@ -73,7 +73,10 @@ const CardAnimation = () => {
         <div className="card js animated"></div>
         <div className="card react animated"></div>
         <div className="card next animated"></div>
-        <div className="card node animated"></div>
+        <div className="card node animated">
+          {" "}
+          <div className="bg-node"></div>
+        </div>
         <div className="card ts animated"></div>
         <div className="card csharp animated"></div>
         <div className="card asp animated"></div>

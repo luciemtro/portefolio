@@ -59,12 +59,13 @@
     0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s ease, box-shadow 0.2s ease;
   will-change: transform, filter;
-  background-color: #040712;
+  background-color: #000000e6;
   background-image: var(--front);
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transform-origin: center;
+  border: 1.5px solid #ce9ffb;
 }
 /* Écrans moyens */
 @media screen and (max-width: 1024px) {
@@ -93,6 +94,7 @@
     20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1),
     7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3),
     0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  border: none;
 }
 /* Transmission couleur et image à chaque card */
 .card.html {
@@ -135,6 +137,7 @@
   --color2: var(--node2);
   --front: var(--nodefront);
 }
+
 .card.react {
   --color1: var(--react1);
   --color2: var(--react2);

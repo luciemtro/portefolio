@@ -13,7 +13,8 @@
 :root {
   --colorfond1: rgba(109, 53, 105, 0.5);
   --colorfond2: rgb(21, 16, 72);
-  --neon-violet: #b300ff;
+  --neon-violet: #ce9ffb;
+  --neon-rose: #e4cafd;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,11 +28,11 @@ body {
   color: var(--foreground);
   overflow-x: hidden;
   background-image: linear-gradient(
-    rgb(0, 0, 0),
+    rgb(16, 12, 16),
     rgb(21, 17, 22),
     rgb(9, 0, 14),
-    rgb(1, 1, 1),
-    rgb(13, 1, 20)
+    rgb(8, 8, 8),
+    rgb(24, 17, 27)
   );
 }
 * {
@@ -91,7 +92,7 @@ html {
 }
 .puce--violet {
   border-image: url(/images/button.svg) 0 20 fill;
-  color: #b300ff;
+  color: var(--neon-violet);
   padding: 10px 30px;
 }
 
