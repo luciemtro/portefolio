@@ -28,12 +28,13 @@ body {
   color: var(--foreground);
   overflow-x: hidden;
   background-image: linear-gradient(
-    rgb(16, 12, 16),
-    rgb(21, 17, 22),
-    rgb(9, 0, 14),
-    rgb(8, 8, 8),
-    rgb(24, 17, 27)
-  );
+      rgba(17, 14, 19, 0.964),
+      rgb(21, 17, 22),
+      rgba(9, 0, 14, 0.952),
+      rgb(8, 8, 8),
+      rgba(24, 17, 27, 0.988)
+    ),
+    url("/images/bg-transparent.png");
   background-repeat: repeat;
 }
 

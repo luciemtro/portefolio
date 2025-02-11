@@ -41,7 +41,7 @@
   --drinksaverfront: url("/images/techskills/drinksaver.svg");
   --pokemon1: #0090e3;
   --pokemon2: #bc00b3;
-  --pokemonfront: url("/images/techskills/pokemon.svg");
+  --pokemonfront: url("/images/techskills/pokemon.jpg");
 }
 
 .card {
@@ -170,6 +170,7 @@
   --color1: var(--pokemon1);
   --color2: var(--pokemon2);
   --front: var(--pokemonfront);
+  background-size: cover !important;
   width: 250px !important;
   height: 250px !important;
 }
