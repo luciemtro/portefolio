@@ -2,6 +2,7 @@
 "use client";
 import React, { useEffect } from "react";
 import $ from "jquery";
+import { FaGithub } from "react-icons/fa";
 
 const ProjectAnimation = () => {
   useEffect(() => {
@@ -67,13 +68,22 @@ const ProjectAnimation = () => {
   return (
     <div className="card-animation">
       <div className=" flex flex-wrap justify-center">
-        <a href="https://pokemon-green-gamma.vercel.app">
-          <div className="card pokemon animated">
-            <div className="flex justify-center items-center p-2 container-title-project">
-              <h3 className="title-project">Pokemon Store</h3>
+        <article className="flex flex-col items-center gap-4">
+          <a href="https://pokemon-green-gamma.vercel.app" target="_blank">
+            <div className="card pokemon animated">
+              <div className="flex justify-center items-center p-2 container-title-project">
+                <h3 className="title-project">Pokemon Store</h3>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+          <a
+            href="https://github.com/luciemtro/pokemon"
+            className="cursor-pointer hover:scale-125 transform transition-transform duration-500 ease-in-out hover:text-purple-500 "
+            target="_blank"
+          >
+            <FaGithub size={45} />
+          </a>
+        </article>
         <div className="card drinksaver animated">
           <div className="flex justify-center items-center p-2 container-title-project">
             <h3 className="title-project">Drink Saver</h3>
